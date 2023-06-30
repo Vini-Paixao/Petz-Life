@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Tcc.Areas.Funcionario.Models.modelPlano>
+@{
+    ViewBag.Title = "Planos -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .botao-informacoes {
+            color: #fff;
+            width: 249px;
+            height: 50px;
+            font-weight: 600;
+            font-size: 20px;
+            padding: 10px 20px 0 20px;
+            transition: 0.3s;
+            background: #6400FF;
+            border-radius: 55px;
+        }
+
+            .botao-informacoes:hover {
+                color: #fff;
+                width: 249px;
+                height: 50px;
+                transform: scale(1.05);
+                background: #6400FF;
+                border-radius: 55px;
+            }
+
+        .plano {
+            border: 1px solid #CCCCCC;
+            transition: 0.3s;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .plano:hover {
+                border-color: #6400FF;
+                transform: scale(1.05);
+                border-radius: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+        .tag {
+            font-weight: 600;
+            font-size: 20px;
+            color: #444;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            width: 100%;
+            text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF, 1px 1px 0 #FFF, 1px 1px 0 #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-5" style="padding-top: -20px;">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 style="text-transform: uppercase; color: rgba(69, 161, 255, 0.94); font-weight: 800; font-size: 50px;">Compare e escolha o melhor plano para o seu pet</h2>
+                <p style="font-weight: 400; font-size: 20px; line-height: 30px;"><span style="color: #6400FF; font-weight: 700;">Seu animal de estimação estará sempre protegido:</span> O preço e a cobertura serão os mesmos, não importa a raça ou idade. Sempre que precisar, poderá usar sem a necessidade de autorização ou trâmites burocráticos.</p>
+            </div>
+        </div>
+        <div class="row mt-2 pt-5 px-5" style="background-color: rgba(131, 192, 255, 0.65); padding: 20px; border-radius: 30px">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 text-center my-4">
+                    <div class="card plano">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="font-weight: 600; font-size: 30px; text-transform: uppercase;">Plano <span style="color:@item.corPlano; font-weight: 700;">@item.nomePlano</span></h5>
+                            <img src="@item.imgPlano" alt="Imagem Ilustrativa" class="img-fluid mb-4" style="width: 100%;">
+                            <div class="d-flex align-items-center text-center" style="position: relative; padding: 8px;">
+                                <div style="background: @item.corPlano; mix-blend-mode: darken; filter: blur(2px); border-radius: 10px; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                                <p class="tag">
+                                    @item.tagPlano
+                                </p>
+                            </div>
+                            <p class="text-center my-2" style="font-weight: 500; font-size: 30px;">@item.valorPlano/mês</p>
+                            @Html.ActionLink("Mais Informações", "DetalhesPlano", "Home", new { id = item.idPlano }, new { @class = "btn btn-custom rounded-pill botao-informacoes" })
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <p class="text-center mt-5" style="font-weight: 300; font-size: 20px;">* O preço pode sofrer alteração de acordo com a espécie, <b>confira mais informações na página do plano!</b></p>
+    </div>
+</body>

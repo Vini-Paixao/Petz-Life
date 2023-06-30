@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = "Sistema - ";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        .fundo {
+            background: rgba(171, 131, 255, 0.5);
+            padding: 25px;
+            border-radius: 50px;
+        }
+
+        .nav-links {
+            color: #fff;
+        }
+
+            .nav-links:hover {
+                color: #A56BFF;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-fluid text-center py-5">
+        <h1 class="mb-5" style="text-transform: uppercase; color: #5A20B5; font-weight: 700; font-size: 40px;">Bem-vindo ao sistema PetLife!</h1>
+        <div class="quick-links fundo py-5" style="margin-bottom: 50px;">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-3 mb-3 mx-auto">
+                            <a href="@Url.Action("ListarPlano", "Plano", new { area = "Funcionario" })" class="nav-link  nav-links">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <i class="fas fa-file-alt fa-2x"></i>
+                                    <br />
+                                    <p style="font-size: 30px">Planos</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-3 mb-3 mx-auto ">
+                            <a href="@Url.Action("ListarBeneficio", "Beneficio", new { area = "Funcionario" })" class="nav-link  nav-links">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <i class="fas fa-gift fa-2x"></i>
+                                    <br />
+                                    <p style="font-size: 30px">Benefícios</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-3 mb-3 mx-auto ">
+                            <a href="@Url.Action("ListarTipo", "Tipo", new { area = "Funcionario" })" class="nav-link  nav-links">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <i class="fas fa-paw fa-2x"></i>
+                                    <br />
+                                    <p style="font-size: 30px">Tipos de Animal</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-3 mb-3 mx-auto ">
+                            <a href="@Url.Action("ListarRaca", "Raca", new { area = "Funcionario" })" class="nav-link  nav-links">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <i class="fa-solid fa-dog fa-2x"></i>
+                                    <br />
+                                    <p style="font-size: 30px">Raças</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-3 mb-3 mx-auto ">
+                            <a href="@Url.Action("ListarClinica", "Clinica", new { area = "Funcionario" })" class="nav-link  nav-links">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <i class="fas fa-hospital fa-2x"></i>
+                                    <br />
+                                    <p style="font-size: 30px">Clínicas</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-3 mb-3 mx-auto ">
+                            <a href="@Url.Action("ListarVeterinario", "Veterinario", new { area = "Funcionario" })" class="nav-link  nav-links">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <i class="fa-solid fa-user-doctor fa-2x"></i>
+                                    <br />
+                                    <p style="font-size: 30px">Veterinário</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-3 mb-3 mx-auto ">
+                            <a href="@Url.Action("ListarAtendimento", "Atendimento", new { area = "Funcionario" })" class="nav-link  nav-links">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <i class="fas fa-phone fa-2x"></i>
+                                    <br />
+                                    <p style="font-size: 30px">Atendimentos</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

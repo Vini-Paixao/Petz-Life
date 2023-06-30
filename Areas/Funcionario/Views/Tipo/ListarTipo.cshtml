@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Tcc.Areas.Funcionario.Models.modelTipo>
+
+@{
+    ViewBag.Title = "Lista dos Tipos";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Lista dos Tipos</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Novo Tipo", "CadTipo", "Tipo", new { area = "Funcionario" }, new { @class = "btn btn-primary rounded-pill botao-funcionario" })
+</p>
+<table class="table text-center">
+    <tr>
+        <th class="col-md-4">
+            @Html.DisplayNameFor(model => model.idTipo)
+        </th>
+        <th class="col-md-4">
+            @Html.DisplayNameFor(model => model.nomeTipo)
+        </th>
+        <th class="col-md-4">Ações</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="col-md-4">
+            @Html.DisplayFor(modelItem => item.idTipo)
+        </td>
+        <td class="col-md-4">
+            @Html.DisplayFor(modelItem => item.nomeTipo)
+        </td>
+        <td class="col-md-4">
+            @Html.ActionLink("Atualizar", "EditarTipo", new { id = item.idTipo }) |
+            @Html.ActionLink("Excluir", "ExcluirTipo", new { id = item.idTipo }, new { onclick = " return confirm('Deseja realmente excluir?');" })
+        </td>
+    </tr>
+}
+
+</table>

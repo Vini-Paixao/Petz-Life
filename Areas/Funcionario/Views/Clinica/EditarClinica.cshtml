@@ -1,0 +1,100 @@
+﻿@model Tcc.Areas.Funcionario.Models.modelClinica
+
+@{
+    ViewBag.Title = "Editar as Clínicas - ";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Editar as Clínicas</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group text-center fw-bolder">
+            @Html.LabelFor(model => model.idClinica, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-4 offset-md-4 pt-2">
+                @Html.EditorFor(model => model.idClinica, new { htmlAttributes = new { @class = "form-control d-inline-flex text-center", @readOnly = "readOnly" } })
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            @Html.LabelFor(model => model.nomeClinica, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-6 offset-md-3 pt-2">
+                @Html.ValidationMessageFor(model => model.nomeClinica, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-4 offset-md-4 pt-2">
+                @Html.EditorFor(model => model.nomeClinica, new { htmlAttributes = new { @class = "form-control d-inline-flex text-center" } })
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            @Html.LabelFor(model => model.telefoneClinica, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-6 offset-md-3 pt-2">
+                @Html.ValidationMessageFor(model => model.telefoneClinica, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-4 offset-md-4 pt-2">
+                @Html.EditorFor(model => model.telefoneClinica, new { htmlAttributes = new { @class = "form-control d-inline-flex text-center" } })
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            @Html.LabelFor(model => model.celularClinica, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-6 offset-md-3 pt-2">
+                @Html.ValidationMessageFor(model => model.celularClinica, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-4 offset-md-4 pt-2">
+                @Html.EditorFor(model => model.celularClinica, new { htmlAttributes = new { @class = "form-control d-inline-flex text-center" } })
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            @Html.LabelFor(model => model.emailClinica, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-6 offset-md-3 pt-2">
+                @Html.ValidationMessageFor(model => model.emailClinica, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-4 offset-md-4 pt-2">
+                @Html.EditorFor(model => model.emailClinica, new { htmlAttributes = new { @class = "form-control d-inline-flex text-center" } })
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            @Html.LabelFor(model => model.avaliacaoClinica, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-6 offset-md-3 pt-2">
+                @Html.ValidationMessageFor(model => model.avaliacaoClinica, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-4 offset-md-4 pt-2">
+                @Html.EditorFor(model => model.avaliacaoClinica, new { htmlAttributes = new { @class = "form-control d-inline-flex text-center" } })
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            @Html.LabelFor(model => model.horarioClinica, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-6 offset-md-3 pt-2">
+                @Html.ValidationMessageFor(model => model.horarioClinica, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-4 offset-md-4 pt-2">
+                @Html.EditorFor(model => model.horarioClinica, new { htmlAttributes = new { @class = "form-control d-inline-flex text-center" } })
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="col-md-4 offset-md-4 pt-2 text-center">
+            @Html.DropDownList("Enderecos", "Escolha o Endereço")
+        </div>
+        <br />
+        <br />
+        <div class="form-group text-center fw-bolder">
+            <div class="col-md-12">
+                <input type="submit" value="Alterar" class="btn btn-warning rounded-pill" />
+            </div>
+        </div>
+        <br />
+    </div>
+}
+<div class="text-center">
+    @Html.ActionLink("Voltar", "ListarClinica", "Clinica")
+</div>

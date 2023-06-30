@@ -1,0 +1,318 @@
+/* BEGIN EXTERNAL SOURCE */
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        li a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+            li a:hover {
+                color: #ffffff;
+            }
+
+        footer {
+            background-color: #67B2FF;
+            width: 100%;
+        }
+
+        .footer {
+            padding: 10px,10px,0,10px;
+        }
+
+            .footer .row {
+                justify-content: center;
+                align-items: center;
+            }
+
+        ul.list-inline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        .nav-item {
+            font-weight: 500;
+            font-size: 25px
+        }
+
+        .nav-link {
+            margin-right: 30px;
+            text-transform: uppercase;
+            color: #83C0FF;
+        }
+
+            .nav-link:hover {
+                text-transform: uppercase;
+                color: #A56BFF;
+            }
+
+        .botão1 {
+            background-color: #A56BFF;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+            .botão1:hover {
+                background-color: #A56BFF;
+                color: #ffffff;
+                transform: scale(1.05);
+            }
+
+        .botão2 {
+            background-color: #A56BFF;
+            color: #ffffff;
+            transition: 0.3s;
+        }
+
+            .botão2:hover {
+                background-color: #A56BFF;
+                color: #ffffff;
+                transform: scale(1.05);
+            }
+
+        .link-footer {
+            color: #000000;
+            text-decoration: none;
+        }
+
+            .link-footer:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+    
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+a {
+margin-right: 10px; padding: 0;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+img {
+width: 150px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+div {
+border-bottom: 1px solid #808080; padding-bottom: 10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-bottom:10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-bottom:10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 40px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+ul {
+padding-top:10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        li a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+            li a:hover {
+                color: #ffffff;
+            }
+
+        footer {
+            background-color: #67B2FF;
+            width: 100%;
+        }
+
+        .footer {
+            padding: 10px,10px,0,10px;
+        }
+
+            .footer .row {
+                justify-content: center;
+                align-items: center;
+            }
+
+        ul.list-inline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        .nav-item {
+            font-weight: 500;
+            font-size: 25px
+        }
+
+        .nav-link {
+            margin-right: 30px;
+            text-transform: uppercase;
+            color: #83C0FF;
+        }
+
+            .nav-link:hover {
+                text-transform: uppercase;
+                color: #A56BFF;
+            }
+
+        .botão1 {
+            background-color: #A56BFF;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+            .botão1:hover {
+                background-color: #A56BFF;
+                color: #ffffff;
+                transform: scale(1.05);
+            }
+
+        .botão2 {
+            background-color: #A56BFF;
+            color: #ffffff;
+            transition: 0.3s;
+        }
+
+            .botão2:hover {
+                background-color: #A56BFF;
+                color: #ffffff;
+                transform: scale(1.05);
+            }
+
+        .link-footer {
+            color: #000000;
+            text-decoration: none;
+        }
+
+            .link-footer:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+    
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+a {
+margin-right: 10px; padding: 0;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+img {
+width: 150px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+div {
+border-bottom: 1px solid #808080; padding-bottom: 10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-bottom:10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-bottom:10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 40px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+li {
+margin-right: 10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+ul {
+padding-top:10px
+}
+/* END EXTERNAL SOURCE */

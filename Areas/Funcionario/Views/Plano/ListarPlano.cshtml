@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Tcc.Areas.Funcionario.Models.modelPlano>
+
+    @{
+    ViewBag.Title = "Lista dos Planos - ";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2 class="text-center titulo-funcionario">Lista dos Planos</h2>
+    <p class="text-center">
+        @Html.ActionLink("Novo Plano", "CadPlano", "Plano", new { area = "Funcionario" }, new { @class = "btn btn-primary rounded-pill botao-funcionario" } )
+    </p>
+    <table class="table text-center">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idPlano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nomePlano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tagPlano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.valorPlano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipoPlano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.corPlano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imgPlano)
+            </th>
+            <th class="col-md-3">
+                @Html.DisplayNameFor(model => model.descPlano)
+            </th>
+            <th>Ações</th>
+        </tr>
+
+        @foreach (var item in Model) {
+        <tr>
+            <td style="line-height:90px;">
+                @Html.DisplayFor(modelItem => item.idPlano)
+            </td>
+            <td style="line-height:90px;">
+                @Html.DisplayFor(modelItem => item.nomePlano)
+            </td>
+            <td style="line-height:90px;">
+                @Html.DisplayFor(modelItem => item.tagPlano)
+            </td>
+            <td style="line-height:90px;">
+                @Html.DisplayFor(modelItem => item.valorPlano)
+            </td>
+            <td style="line-height:90px;">
+                @Html.DisplayFor(modelItem => item.tipoPlano)
+            </td>
+            <td style="line-height:90px;">
+                <div style="background-color: @item.corPlano;border: 1px solid #000000;border-radius: 10px;font-weight: 700;">@item.corPlano</div>
+            </td>
+            <td style="line-height:90px;">
+                <a href="@item.imgPlano">@item.nomePlano</a>
+            </td>
+            <td style="text-align: justify; font-size: 15px" class="col-md-3">
+                @Html.DisplayFor(modelItem => item.descPlano)
+            </td>
+            <td style="line-height:90px;">
+                @Html.ActionLink("Atualizar", "EditarPlano", new { id = item.idPlano }) |
+                @Html.ActionLink("Excluir", "ExcluirPlano", new { id = item.idPlano }, new { onclick = " return confirm('Deseja realmente excluir?');" })
+            </td>
+        </tr>
+}
+
+    </table>

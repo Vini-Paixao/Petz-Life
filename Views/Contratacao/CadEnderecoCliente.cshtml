@@ -1,0 +1,135 @@
+﻿@model Tcc.Areas.Funcionario.Models.modelEndereco
+
+@{
+    ViewBag.Title = "Contratação - ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        input, select, textarea {
+            max-width: none;
+        }
+
+        .fundo {
+            background-color: rgba(131, 192, 255, 0.25);
+            border-radius: 30px;
+            width: 90vw;
+        }
+
+        .btn-cancelar {
+            background-color: red;
+            border: 4px solid red;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+            .btn-cancelar:hover {
+                text-decoration: none;
+                border: 4px solid red;
+                background-color: #ffffff;
+                color: red;
+                transform: scale(1.05);
+            }
+
+        .tituloss {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #A56BFF;
+            font-size: 30px
+        }
+
+        .fa-circle, .fa-circle-check {
+            color: #A56BFF;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center titulos py-4">Contratação - Cadastro de Endereço</h2>
+    <div class="row text-center col-1 offset-4 mb-5" style="display: inline-flex;align-items: center;justify-content: space-between;flex-wrap: nowrap;"><i class="fa-solid fa-circle-check"></i><i class="fa-regular fa-circle fa-beat"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal was-validated row fundo p-5">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group text-center fw-bolder col-md-7 py-4">
+                <label class="control-label" for="nomeEndereco">@Html.LabelFor(model => model.nomeEndereco)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="nomeEndereco" id="nomeEndereco" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-5 py-4">
+                <label class="control-label" for="cepEndereco">@Html.LabelFor(model => model.cepEndereco)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="10" name="cepEndereco" id="cepEndereco" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-6 py-4">
+                <label class="control-label" for="logradouroEndereco">@Html.LabelFor(model => model.logradouroEndereco)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="80" name="logradouroEndereco" id="logradouroEndereco" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-1 py-4">
+                <label class="control-label" for="numeroEndereco">@Html.LabelFor(model => model.numeroEndereco)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="10" name="numeroEndereco" id="numeroEndereco" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-5 py-4">
+                <label class="control-label" for="complementoEndereco">@Html.LabelFor(model => model.complementoEndereco)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="complementoEndereco" id="complementoEndereco" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-5 py-4">
+                <label class="control-label" for="bairroEndereco">@Html.LabelFor(model => model.bairroEndereco)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="bairroEndereco" id="bairroEndereco" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-4 py-4">
+                <label class="control-label" for="cidadeEndereco">@Html.LabelFor(model => model.cidadeEndereco)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="cidadeEndereco" id="cidadeEndereco" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-3 py-4">
+                <div>
+                    <label class="control-label" for="estados">@Html.LabelFor(model => model.nomeEstado)</label>
+                </div>
+                <div class="mb-5 text-center pt-2">
+                    <select class="form-select d-inline-flex text-center pt-2" required aria-label="estados" name="estados">
+                        <option value="">Selecione o Estado</option>
+                        @foreach (var estado in ViewBag.estados)
+                        {
+                            <option value="@estado.Value">@estado.Text</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <br />
+            <div class="col-12 d-inline-flex text-center">
+                <div class="form-group text-center col-md-2 offset-md-4">
+                    <a href="@Url.Action("CancelaLogin", "Contratacao", new { @area = "", id = ViewBag.idLogin } )" class="btn btn-custom btn-cancelar rounded-pill text-center fw-bolder">
+                        <i class="fa-solid fa-xmark"></i> Cancelar
+                    </a>
+                </div>
+                <br />
+                <div class="form-group text-center col-md-2">
+                    <button type="submit" class="btn btn-custom rounded-pill botão1 fw-bolder">Continuar <i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div class="row text-center align-content-center justify-content-center mt-5">
+                <img src="~/Imagens/endereco.png" alt="Imagem Ilustrativa" class="img-fluid" style="width: 60%;">
+            </div>
+        </div>
+    }
+</body>

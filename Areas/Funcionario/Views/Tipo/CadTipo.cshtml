@@ -1,0 +1,38 @@
+﻿@model Tcc.Areas.Funcionario.Models.modelTipo
+
+@{
+    ViewBag.Title = "Cadastro de Tipos";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Cadastro de Tipos</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group text-center fw-bolder">
+            @Html.LabelFor(model => model.nomeTipo, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-6 offset-md-3 pt-2">
+                @Html.ValidationMessageFor(model => model.nomeTipo, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-4 offset-md-4 pt-2">
+                @Html.EditorFor(model => model.nomeTipo, new { htmlAttributes = new { @class = "form-control d-inline-flex text-center" } })
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            <div class="col-md-12">
+                <input type="submit" value="Cadastrar" class="btn btn-success rounded-pill" />
+            </div>
+        </div>
+        <br />
+    </div>
+}
+
+<div class="text-center">
+    @Html.ActionLink("Voltar", "ListarTipo", "Tipo")
+</div>

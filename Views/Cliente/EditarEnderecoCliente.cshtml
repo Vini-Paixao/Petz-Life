@@ -1,0 +1,109 @@
+﻿@model Tcc.Areas.Funcionario.Models.modelEndereco
+
+@{
+    ViewBag.Title = "Alteração cadastral -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+        .dropdown select {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+</style>
+
+<h2 class="text-center titulos">Alteração do Endereço</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal was-validated">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.idEndereco)
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="nomeEndereco">@Html.LabelFor(model => model.nomeEndereco)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="nomeEndereco" id="nomeEndereco" value="@Model.nomeEndereco" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="logradouroEndereco">@Html.LabelFor(model => model.logradouroEndereco)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="80" name="logradouroEndereco" id="logradouroEndereco" value="@Model.logradouroEndereco" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="numeroEndereco">@Html.LabelFor(model => model.numeroEndereco)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="10" name="numeroEndereco" id="numeroEndereco" value="@Model.numeroEndereco" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="complementoEndereco">@Html.LabelFor(model => model.complementoEndereco)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" type="text" maxlength="50" name="complementoEndereco" id="complementoEndereco" value="@Model.complementoEndereco" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="cepEndereco">@Html.LabelFor(model => model.cepEndereco)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="10" name="cepEndereco" id="cepEndereco" value="@Model.cepEndereco" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="bairroEndereco">@Html.LabelFor(model => model.bairroEndereco)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="bairroEndereco" id="bairroEndereco" value="@Model.bairroEndereco" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="cidadeEndereco">@Html.LabelFor(model => model.cidadeEndereco)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="cidadeEndereco" id="cidadeEndereco" value="@Model.cidadeEndereco" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <div>
+            <label class="control-label col-md-12" for="estados">@Html.LabelFor(model => model.nomeEstado)</label>
+        </div>
+        <div class="col-md-4 offset-md-4 mb-5 text-center">
+            <select class="form-select d-inline-flex text-center pt-2" required aria-label="estados" name="estados">
+                <option value="">Selecione o Estado</option>
+                @foreach (var estado in ViewBag.estados)
+                {
+                    <option value="@estado.Value">@estado.Text</option>
+                }
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-group col-12 d-inline-flex text-center">
+        <div class="text-center fw-bolder col-md-2 offset-md-4">
+            <a href="@Url.Action("DetalhesCliente", "Cliente", new { @area = "", id = Session["idLogado"]} )" class="btn btn-warning text-center fw-bolder">
+                Cancelar/Voltar
+            </a>
+        </div>
+        <div class="text-center fw-bolder col-md-2">
+            <input type="submit" value="Alterar Endereço" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+}

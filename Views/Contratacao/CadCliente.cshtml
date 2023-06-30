@@ -1,0 +1,146 @@
+﻿@model Tcc.Models.modelCliente
+
+@{
+    ViewBag.Title = "Contratação - ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        input, select, textarea {
+            max-width: none;
+        }
+
+        .fundo {
+            background-color: rgba(131, 192, 255, 0.25);
+            border-radius: 30px;
+            width: 90vw;
+        }
+
+        .btn-cancelar {
+            background-color: red;
+            border: 4px solid red;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+            .btn-cancelar:hover {
+                text-decoration: none;
+                border: 4px solid red;
+                background-color: #ffffff;
+                color: red;
+                transform: scale(1.05);
+            }
+
+        .tituloss {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #A56BFF;
+            font-size: 30px
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center titulos my-4">Contratação - Dados Pessoais</h2>
+    <div class="row text-center col-1 offset-4" style="color: #A56BFF; display: inline-flex; align-items: center; justify-content: space-between; flex-wrap: nowrap;"><i class="fa-solid fa-circle-check"></i><i class="fa-solid fa-circle-check"></i><i class="fa-regular fa-circle fa-beat"></i><i class="fa-solid fa-circle"></i></div>
+    @using (Html.BeginForm("CadCliente", "Contratacao", new { id = "" }, FormMethod.Post, new { id = "formCliente" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal was-validated row mt-5 p-5 fundo">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group text-center fw-bolder offset-md-2 col-md-4 py-4">
+                <label class="control-label" for="nomeCliente">@Html.LabelFor(model => model.nomeCliente)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="nomeCliente" id="nomeCliente" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-4 py-4">
+                <label class="control-label" for="sobrenomeCliente">@Html.LabelFor(model => model.sobrenomeCliente)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="sobrenomeCliente" id="sobrenomeCliente" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder offset-md-2 col-md-4 py-4">
+                <label class="control-label" for="rgCliente">@Html.LabelFor(model => model.rgCliente)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="15" name="rgCliente" id="rgCliente" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-4 py-4">
+                <label class="control-label" for="cpfCliente">@Html.LabelFor(model => model.cpfCliente)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="15" name="cpfCliente" id="cpfCliente" value="" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="form-group text-center fw-bolder offset-md-2 col-md-4 py-4">
+                <label class="control-label" for="telefoneCliente">@Html.LabelFor(model => model.telefoneCliente)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="tel" maxlength="20" name="telefoneCliente" id="telefoneCliente" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder col-md-4 py-4">
+                <label class="control-label" for="celularCliente">@Html.LabelFor(model => model.celularCliente)</label>
+                <div class="pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="tel" maxlength="20" name="celularCliente" id="celularCliente" value="" />
+                </div>
+            </div>
+            <br />
+            <div class="col-12 d-inline-flex text-center pt-4">
+                <div class="form-group text-center col-md-2 offset-md-4">
+                    <a href="@Url.Action("CancelaEndereco", "Contratacao", new { @area = "", id = ViewBag.idEndereco } )" class="btn btn-custom btn-cancelar rounded-pill text-center fw-bolder">
+                        <i class="fa-solid fa-xmark"></i> Cancelar
+                    </a>
+                </div>
+                <br />
+                <div class="form-group text-center fw-bolder col-md-2">
+                    <button type="submit" class="btn btn-custom rounded-pill botão1 fw-bolder" data-bs-toggle="modal" data-bs-target="#cadastrarModal" onclick="redirecionar()">Continuar <i class="fa-solid fa-angle-right"></i></button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="cadastrarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title fs-5" id="exampleModalLabel">Escolha a espécie do Pet</h4>
+                                    <i class="fa-regular fa-circle-xmark" data-bs-dismiss="modal" style="cursor: pointer; font-size: 30px; color:#6400FF;"></i>
+                                </div>
+                                <div class="modal-body text-center align-content-center justify-content-center">
+                                    <select required class="form-select mx-auto" id="dropdown" aria-label="tipos" name="tipos">
+                                        <option value="">Espécies:</option>
+                                        @foreach (var especie in ViewBag.tipos)
+                                        {
+                                            <option value="@especie.Value">@especie.Text</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="modal-footer text-center align-content-center justify-content-center">
+                                    <button type="button" class="btn rounded-pill botão1" onclick="cadastrarPet()">Cadastrar Pet <i class="fa-solid fa-paw"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center align-content-center justify-content-center mt-5">
+                <img src="~/Imagens/login.png" alt="Imagem Ilustrativa" class="img-fluid" style="width: 40%;">
+            </div>
+        </div>
+
+    }
+    <script>
+        function cadastrarPet() {
+            var especieSelecionada = document.getElementById("dropdown").value;
+            if (especieSelecionada !== "") {
+                var form = document.getElementById("formCliente");
+                var url = form.action + "/" + especieSelecionada;
+                form.action = url;
+                form.submit();
+            }
+        }
+    </script>
+</body>

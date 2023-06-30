@@ -1,0 +1,62 @@
+﻿@model Tcc.Models.modelAtendimento
+@{
+    ViewBag.Title = "Em Manutenção -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        p {
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Funcionalidade em Desenvolvimento</h5>
+                    <i class="fa-regular fa-circle-xmark" data-bs-dismiss="modal" style="cursor: pointer; font-size: 30px; color:#6400FF;"></i>
+                </div>
+                <div class="modal-body">
+                    Para fazer o seu agendamento pedimos para que entre em contato com o nosso telefone comercial e agende a sua consulta diretamente com eles!
+                </div>
+                <div class="modal-footer text-center justify-content-center align-content-center">
+                    <a class="btn rounded-pill botão1" href="tel:(11)%2032442898">
+                        Agendar Consulta <i class="fa-solid fa-calendar-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center titulos">Tela em Manutenção <i class="fa-solid fa-gears"></i></h2>
+
+    <div class="row text-center align-content-center justify-content-center mt-5">
+        <img src="~/Imagens/manutencao.png" alt="Imagem Ilustrativa" class="img-fluid" style="width: 60%;">
+    </div>
+
+    <div class="text-center fw-bolder col-md-10 offset-md-1">
+        <p>
+            Atualmente, estamos realizando algumas melhorias importantes em nosso site para proporcionar a você uma experiência ainda melhor. Pedimos desculpas por qualquer inconveniência que isso possa causar.
+            <br /><br />Por favor, volte em breve! Estamos ansiosos para apresentar a você as novas e emocionantes atualizações que estamos implementando.
+            <br /><br />Se você tiver alguma dúvida ou preocupação, não hesite em entrar em contato conosco através do nosso e-mail de suporte.
+            <br /><br />Obrigado por sua paciência e apoio contínuo.
+            <br /><br />Atenciosamente,
+            <br />Petz-Life
+        </p>
+    </div>
+    <div class="text-center fw-bolder col-md-2 offset-md-5">
+        <a href="@Url.Action("Index", "Cliente", new { @area = "" })" class="btn btn-custom botao-cancel text-center rounded-pill fw-bolder">
+            <i class="fa-solid fa-chevron-left"></i> Voltar
+        </a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var myModal = new bootstrap.Modal(document.getElementById('myModal'), {});
+            myModal.show();
+        });
+    </script>
+</body>

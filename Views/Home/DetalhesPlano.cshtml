@@ -1,0 +1,253 @@
+﻿@model IEnumerable<Tcc.Models.PlanoBeneficiosViewModel>
+@{
+    ViewBag.Title = "Detalhes Plano -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .botao-informacoes {
+            color: #fff;
+            width: 249px;
+            height: 50px;
+            font-weight: 600;
+            font-size: 20px;
+            padding: 10px 20px 0 20px;
+            transition: 0.3s;
+            background: #6400FF;
+            border-radius: 55px;
+        }
+
+            .botao-informacoes:hover {
+                color: #fff;
+                width: 249px;
+                height: 50px;
+                transform: scale(1.05);
+                background: #6400FF;
+                border-radius: 55px;
+            }
+
+        .plano-title {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .plano-image {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .plano-description {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            text-align: justify;
+            padding-right: 5px;
+        }
+
+        .plano-beneficios {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            .plano-beneficios li {
+                font-size: 18px;
+                background: rgba(100, 0, 255, 0.45);
+                padding: 5px;
+                color: #fff;
+                font-weight: 400;
+            }
+
+        .plano-price {
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: -5px;
+        }
+
+        .contratar-btn {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+            width: auto;
+            justify-content: center;
+            height: auto;
+            margin-top: -40px;
+            align-items: center;
+            background: #DF83FF;
+            transition: 0.3s;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+            .contratar-btn:hover {
+                transform: scale(1.05);
+                background-color: #5b00e6;
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+        .setaD, .setaE {
+            color: #5A20B5;
+            font-size: 50px;
+            transition: 0.3s;
+        }
+
+            .setaD:hover, .setaE:hover {
+                transform: scale(1.05);
+            }
+
+        .setaE {
+            margin-left: -130%;
+        }
+
+        .setaD {
+            margin-left: 130%;
+        }
+    </style>
+</head>
+<body>
+    <div id="carroselPlanos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @foreach (var plano in Model)
+            {
+                if (plano.nomePlano == "Esmeralda" && plano.idPlano == ViewBag.idPlano)
+                {
+                    <div class="carousel-item active" data-bs-interval="3600000">
+                        <h2 class="plano-title">Plano <span style="color:@plano.corPlano; font-weight: 700">@plano.nomePlano</span></h2>
+                        <div class="container px-5 py-5 text-center" style="background-color: rgba(69, 161, 255, 0.45); border-radius: 30px; width:100%; padding-right: 10px">
+                            <div class="row">
+                                <div class="col-md-6 mx-auto p-5">
+                                    <img src="@plano.imgPlano" alt="Imagem do Plano" class="plano-image">
+                                </div>
+                                <div class="col-md-6 mx-auto">
+                                    <p class="plano-description">@plano.descPlano</p>
+                                </div>
+                                <div class="col-md-10 mx-auto">
+                                    <p class="plano-description fw-bolder">* Devido à diversidade de tamanhos e raças de animais exóticos, os preços de consultas, exames, cirurgias e outros atendimentos podem variar.</p>
+                                </div>
+                                <div class="row col-8 offset-2">
+                                    <h3 style=" font-size: 40px; font-weight: 700; color: #5A20B5; text-transform: uppercase;">Benefícios Exclusivos</h3>
+                                    <ul class="plano-beneficios text-center">
+                                        @foreach (var bene in plano.Beneficios)
+                                        {
+                                            <li class="rounded-pill my-2">@bene.nomeBeneficio</li>
+                                        }
+                                    </ul>
+                                </div>
+                                <p class="plano-price pt-3">@plano.valorPlano/mês</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-content-center text-center">
+                            <a href="@Url.Action("CadLoginCliente", "Contratacao", new { @area = "", id = plano.idPlano })" class="contratar-btn">Contratar agora</a>
+                        </div>
+                    </div>
+                }
+                else if (plano.idPlano == ViewBag.idPlano)
+                {
+                    <div class="carousel-item active" data-bs-interval="3600000">
+                        <h2 class="plano-title">Plano <span style="color:@plano.corPlano; font-weight: 700">@plano.nomePlano</span></h2>
+                        <div class="container px-5 py-5 text-center" style="background-color: rgba(69, 161, 255, 0.45); border-radius: 30px; width:100%; padding-right: 10px">
+                            <div class="row">
+                                <div class="col-md-6 mx-auto p-5">
+                                    <img src="@plano.imgPlano" alt="Imagem do Plano" class="plano-image">
+                                </div>
+                                <div class="col-md-6 mx-auto">
+                                    <p class="plano-description">@plano.descPlano</p>
+                                </div>
+                                <div class="row col-8 offset-2">
+                                    <h3 style=" font-size: 40px; font-weight: 700; color: #5A20B5; text-transform: uppercase;">Benefícios Exclusivos</h3>
+                                    <ul class="plano-beneficios text-center">
+                                        @foreach (var bene in plano.Beneficios)
+                                        {
+                                            <li class="rounded-pill my-2">@bene.nomeBeneficio</li>
+                                        }
+                                    </ul>
+                                </div>
+                                <p class="plano-price pt-3">@plano.valorPlano/mês</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-content-center text-center">
+                            <a href="@Url.Action("CadLoginCliente", "Contratacao", new { @area = "", id = plano.idPlano })" class="contratar-btn">Contratar agora</a>
+                        </div>
+                    </div>
+                }
+                else if (plano.nomePlano == "Esmeralda")
+                {
+                    <div class="carousel-item" data-bs-interval="3600000">
+                        <h2 class="plano-title">Plano <span style="color:@plano.corPlano; font-weight: 700">@plano.nomePlano</span></h2>
+                        <div class="container px-5 py-5 text-center" style="background-color: rgba(69, 161, 255, 0.45); border-radius: 30px; width:100%; padding-right: 10px">
+                            <div class="row">
+                                <div class="col-md-6 mx-auto p-5">
+                                    <img src="@plano.imgPlano" alt="Imagem do Plano" class="plano-image">
+                                </div>
+                                <div class="col-md-6 mx-auto">
+                                    <p class="plano-description">@plano.descPlano</p>
+                                </div>
+                                <div class="col-md-10 mx-auto">
+                                    <p class="plano-description fw-bolder">* Devido à diversidade de tamanhos e raças de animais exóticos, os preços de consultas, exames, cirurgias e outros atendimentos podem variar.</p>
+                                </div>
+                                <div class="row col-8 offset-2">
+                                    <h3 style=" font-size: 40px; font-weight: 700; color: #5A20B5; text-transform: uppercase;">Benefícios Exclusivos</h3>
+                                    <ul class="plano-beneficios text-center">
+                                        @foreach (var bene in plano.Beneficios)
+                                        {
+                                            <li class="rounded-pill my-2">@bene.nomeBeneficio</li>
+                                        }
+                                    </ul>
+                                </div>
+                                <p class="plano-price pt-3">@plano.valorPlano/mês</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-content-center text-center">
+                            <a href="@Url.Action("CadLoginCliente", "Contratacao", new { @area = "", id = plano.idPlano })" class="contratar-btn">Contratar agora</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="carousel-item" data-bs-interval="3600000">
+                        <h2 class="plano-title">Plano <span style="color:@plano.corPlano; font-weight: 700">@plano.nomePlano</span></h2>
+                        <div class="container px-5 py-5 text-center" style="background-color: rgba(69, 161, 255, 0.45); border-radius: 30px; width:100%; padding-right: 10px">
+                            <div class="row">
+                                <div class="col-md-6 mx-auto p-5">
+                                    <img src="@plano.imgPlano" alt="Imagem do Plano" class="plano-image">
+                                </div>
+                                <div class="col-md-6 mx-auto">
+                                    <p class="plano-description">@plano.descPlano</p>
+                                </div>
+                                <div class="row col-8 offset-2">
+                                    <h3 style=" font-size: 40px; font-weight: 700; color: #5A20B5; text-transform: uppercase;">Benefícios Exclusivos</h3>
+                                    <ul class="plano-beneficios text-center">
+                                        @foreach (var bene in plano.Beneficios)
+                                        {
+                                            <li class="rounded-pill my-2">@bene.nomeBeneficio</li>
+                                        }
+                                    </ul>
+                                </div>
+                                <p class="plano-price pt-3">@plano.valorPlano/mês</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-content-center text-center">
+                            <a href="@Url.Action("CadLoginCliente", "Contratacao", new { @area = "", id = plano.idPlano })" class="contratar-btn">Contratar agora</a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carroselPlanos" data-bs-slide="prev">
+            <i class="fa-solid fa-chevron-left setaE"></i>
+            <span class="visually-hidden">Voltar</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carroselPlanos" data-bs-slide="next">
+            <i class="fa-solid fa-chevron-right setaD"></i>
+            <span class="visually-hidden">Avançar</span>
+        </button>
+    </div>
+</body>

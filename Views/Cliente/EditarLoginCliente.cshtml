@@ -1,0 +1,112 @@
+﻿@model Tcc.Models.modelLogin
+
+@{
+    ViewBag.Title = "Alteração cadastral -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .input-icons {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .input-icons #confSenha,
+        .input-icons #senha {
+            padding-right: 35px;
+        }
+
+        .input-icons i {
+            margin-left: 10px;
+            margin-right: -30px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center titulos">Alteração dos Dados de Acesso</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal was-validated">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.idLogin)
+            <div class="form-group text-center fw-bolder">
+                <label class="control-label col-md-12" for="usuario">@Html.LabelFor(model => model.usuario)</label>
+                <div class="col-md-4 offset-md-4 pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="usuario" id="usuario" value="@Model.usuario" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder">
+                <label class="control-label col-md-12" for="email">@Html.LabelFor(model => model.email)</label>
+                <div class="col-md-4 offset-md-4 pt-2">
+                    <input class="form-control d-inline-flex text-center" required type="email" maxlength="50" name="email" id="email" value="@Model.email" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder">
+                <label class="control-label col-md-12" for="senha">@Html.LabelFor(model => model.senha)</label>
+                <div class="col-md-4 offset-md-4 pt-2 input-icons">
+                    <input class="form-control d-inline-flex text-center" required type="password" maxlength="50" name="senha" id="senha" value="@Model.senha" />
+                    <i class="fa fa-eye" id="mostra-senha"></i>
+                </div>
+            </div>
+            <br />
+            <div class="form-group text-center fw-bolder">
+                <label class="control-label col-md-12" for="confSenha">@Html.LabelFor(model => model.confSenha)</label>
+                <div class="col-md-4 offset-md-4 pt-2 input-icons">
+                    <input class="form-control d-inline-flex text-center" required type="password" maxlength="50" name="confSenha" id="confSenha" value="@Model.senha" />
+                    <i class="fa fa-eye" id="mostra-confSenha"></i>
+                </div>
+            </div>
+            <br />
+            <div class="form-group col-12 d-inline-flex text-center">
+                <div class="text-center fw-bolder col-md-2 offset-md-4">
+                    <a href="@Url.Action("DetalhesCliente", "Cliente", new { @area = "", id = Model.idLogin} )" class="btn btn-warning text-center fw-bolder">
+                        Cancelar/Voltar
+                    </a>
+                </div>
+                <div class="text-center fw-bolder col-md-2">
+                    <input type="submit" value="Alterar Dados" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#mostra-senha").click(function () {
+                var input = $("#senha");
+                if (input.attr("type") === "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
+
+            $("#mostra-confSenha").click(function () {
+                var input = $("#confSenha");
+                if (input.attr("type") === "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
+            $("form").on("submit", function (e) {
+                var senha = $("#senha").val();
+                var confSenha = $("#confSenha").val();
+
+                if (senha !== confSenha) {
+                    alert("As senhas não são iguais. Por favor, verifique e tente novamente.");
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>

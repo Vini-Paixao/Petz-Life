@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+using System.Xml.Linq;
+
+namespace Tcc.Areas.Funcionario.Models
+{
+    public class modelEndereco
+    {
+        [Display(Name = "Código")]
+        public int idEndereco { get; set; }
+
+        [Required(ErrorMessage = "O Nome é obrigatório")]
+        [Display(Name = "Nome do Endereço")]
+        public string nomeEndereco { get; set; }
+
+        [Required(ErrorMessage = "O Logradouro é obrigatório")]
+        [Display(Name = "Logradouro")]
+        public string logradouroEndereco { get; set; }
+
+        [Required(ErrorMessage = "O Número é obrigatório")]
+        [Display(Name = "Número")]
+        public string numeroEndereco { get; set; }
+
+        [Required(ErrorMessage = "O Complemento é obrigatório")]
+        [Display(Name = "Complemento")]
+        public string complementoEndereco { get; set; }
+
+        [Required(ErrorMessage = "O CEP é obrigatório")]
+        [Display(Name = "CEP")]
+        public string cepEndereco { get; set; }
+
+        [Required(ErrorMessage = "A Bairro é obrigatório")]
+        [Display(Name = "Bairro")]
+        public string bairroEndereco { get; set; }
+
+        [Required(ErrorMessage = "A Cidade é obrigatório")]
+        [Display(Name = "Cidade")]
+        public string cidadeEndereco { get; set; }
+
+        [Required(ErrorMessage = "Estado é obrigatório")]
+        [Display(Name = "Estado")]
+        public string siglaEstado { get; set; }
+
+        [Required(ErrorMessage = "Estado é obrigatório")]
+        [Display(Name = "Estado")]
+        public string nomeEstado { get; set; }
+    }
+}

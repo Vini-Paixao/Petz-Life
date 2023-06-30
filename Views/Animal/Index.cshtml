@@ -1,0 +1,433 @@
+﻿@model IEnumerable<Tcc.Models.AnimalViewModel>
+@{
+    ViewBag.Title = "Meus Pets - ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .info-btn {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 4px solid #6400FF;
+            background-color: #6400FF;
+            color: #FFFFFF;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+            .info-btn:hover {
+                border: 4px solid #6400FF;
+                background-color: #fff;
+                text-decoration: none;
+                color: #6400FF;
+            }
+
+        .view-all-btn {
+            border: 4px solid #DF83FF;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #DF83FF;
+            color: #FFFFFF;
+            border-radius: 30px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            .view-all-btn:hover {
+                transform: scale(1.05);
+                border: 4px solid #DF83FF;
+                background-color: #DF83FF;
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+        .titulos {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6400FF;
+            font-size: 60px
+        }
+
+
+
+        .history-title {
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 700;
+            color: #5A20B5;
+        }
+
+        .history-name {
+            text-transform: uppercase;
+            font-size: 50px;
+            font-weight: 700;
+            color: #5A20B5;
+        }
+
+        .history-item {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .history-item-list {
+            list-style-type: none;
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .fundo {
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgba(131, 192, 255, 0.25);
+            border-radius: 30px;
+            width: 90vw;
+        }
+
+
+        .alterar-btn {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: 0.3s;
+            margin-top: -40px;
+            background-color: #6400FF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+            .alterar-btn:hover {
+                transform: scale(1.05);
+                text-decoration: none;
+                background-color: #6400FF;
+                color: #FFF;
+            }
+
+        .plano-pet-btn {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-top: -40px;
+            background-color: #DF83FF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
+            border-radius: 30px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            .plano-pet-btn:hover {
+                transform: scale(1.05);
+                background-color: #DF83FF;
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+
+        .cadastrar-btn {
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #83C0FF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
+            border-radius: 30px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            .cadastrar-btn:hover {
+                transform: scale(1.05);
+                background-color: #83C0FF;
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+        .setaD, .setaE {
+            color: #5A20B5;
+            font-size: 50px;
+            transition: 0.3s;
+        }
+
+            .setaD:hover, .setaE:hover {
+                transform: scale(1.05);
+            }
+
+        .setaE {
+            margin-left: -130%;
+        }
+
+        .setaD {
+            margin-left: 130%;
+        }
+
+        .imagempet {
+            border: 4px groove #5A20B5;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center titulos">Dados dos Pets</h2>
+    <div id="carroselPets" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            @{bool primeiroPet = true;}
+            @foreach (var pet in Model)
+            {
+                if (primeiroPet)
+                {
+                    <div class="carousel-item active" data-bs-interval="3600000">
+                        <div class="text-center p-5 fundo">
+                            <h2 class="history-name">@pet.nomeAnimal (@pet.apelidoAnimal)</h2>
+                            <img src="@pet.imgAnimal" class="imagempet my-4" alt="Imagem do Pet" />
+                            @if (pet.idadeAnimal > 1)
+                            {
+                                <p class="history-item">@pet.nomeRaca - @pet.nomeTipo - @pet.idadeAnimal anos</p>
+                            }
+                            else
+                            {
+                                <p class="history-item">@pet.nomeRaca - @pet.nomeTipo - @pet.idadeAnimal ano</p>
+                            }
+                            <div class="col-4 offset-3 my-auto mx-auto">
+                                <button type="button" class="btn cadastrar-btn" data-bs-toggle="modal" data-bs-target="#cadastrarModal_@pet.idAnimal">Cadastrar Novo Pet</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="cadastrarModal_@pet.idAnimal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title fs-5" id="exampleModalLabel">Escolha a espécie do Pet</h4>
+                                                <i class="fa-regular fa-circle-xmark" data-bs-dismiss="modal" style="cursor: pointer; font-size: 30px; color:#6400FF;"></i>
+                                            </div>
+                                            <div class="modal-body text-center align-content-center justify-content-center">
+                                                <select required class="form-select mx-auto" id="dropdown_@pet.idAnimal" aria-label="tipos" name="tipos_@pet.idAnimal">
+                                                    <option value="">Espécies:</option>
+                                                    @foreach (var especie in ViewBag.tipos)
+                                                    {
+                                                        <option value="@especie.Value">@especie.Text</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                            <div class="modal-footer text-center align-content-center justify-content-center">
+                                                <button type="button" class="btn rounded-pill botão1" onclick="redirecionarParaCadastroAnimal('dropdown_@pet.idAnimal')">Cadastrar novo Pet <i class="fa-solid fa-paw"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Modal -->
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-6 text-center mx-auto">
+                                    <h3 class="history-title">Informações Adicionais</h3>
+                                    <ul class="history-item-list">
+                                        @if (pet.Informacoes == null || !pet.Informacoes.Any())
+                                        {
+                                            <li>@pet.nomeAnimal não possui informações adicionais cadastradas</li>
+                                        }
+                                        else
+                                        {
+                                            foreach (var info in pet.Informacoes)
+                                            {
+                                                <li>@info.descInformacao</li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                                <div class="col-6 text-center mx-auto">
+                                    <h3 class="history-title">Cuidados</h3>
+                                    <ul class="history-item-list">
+                                        @if (pet.Cuidados == null || !pet.Cuidados.Any())
+                                        {
+                                            <li>@pet.nomeAnimal não possui cuidados cadastrados</li>
+                                        }
+                                        else
+                                        {
+                                            foreach (var cuidado in pet.Cuidados)
+                                            {
+                                                <li>@cuidado.descCuidado</li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-content-center text-center">
+
+                            @if (pet.Informacoes == null || !pet.Informacoes.Any())
+                            {
+                                <div class="col-4">
+                                    <a href="@Url.Action("CadastroInformacao", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Cadastrar Info. Adicional <i class="fa-solid fa-pencil"></i></a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-4">
+                                    <a href="@Url.Action("ListarInformacao", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Alterar Info. Adicionais <i class="fa-solid fa-pencil"></i></a>
+                                </div>
+                            }
+                            <div class="col-4">
+                                <a href="@Url.Action("EditarAnimal", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Alterar Dados <i class="fa-solid fa-pencil"></i></a>
+                            </div>
+                            @if (pet.Cuidados == null || !pet.Cuidados.Any())
+                            {
+                                <div class="col-4">
+                                    <a href="@Url.Action("CadastroCuidado", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Cadastrar Cuidado<i class="fa-solid fa-pencil"></i></a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-4">
+                                    <a href="@Url.Action("ListarCuidado", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Alterar Cuidados <i class="fa-solid fa-pencil"></i></a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    primeiroPet = false;
+                }
+                else
+                {
+                    <div class="carousel-item" data-bs-interval="3600000">
+                        <div class="text-center p-5 fundo">
+                            <h2 class="history-name">@pet.nomeAnimal (@pet.apelidoAnimal)</h2>
+                            <img src="@pet.imgAnimal" class="imagempet my-4" alt="Imagem do Pet" />
+                            @if (pet.idadeAnimal > 1)
+                            {
+                                <p class="history-item">@pet.nomeRaca - @pet.nomeTipo - @pet.idadeAnimal anos</p>
+                            }
+                            else
+                            {
+                                <p class="history-item">@pet.nomeRaca - @pet.nomeTipo - @pet.idadeAnimal ano</p>
+                            }
+                            <div class="col-4 offset-3 my-auto mx-auto">
+                                <button type="button" class="btn cadastrar-btn" data-bs-toggle="modal" data-bs-target="#cadastrarModal_@pet.idAnimal">Cadastrar Novo Pet</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="cadastrarModal_@pet.idAnimal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title fs-5" id="exampleModalLabel">Escolha a espécie do Pet</h4>
+                                                <i class="fa-regular fa-circle-xmark" data-bs-dismiss="modal" style="cursor: pointer; font-size: 30px; color:#6400FF;"></i>
+                                            </div>
+                                            <div class="modal-body text-center align-content-center justify-content-center">
+                                                <select required class="form-select mx-auto" id="dropdown_@pet.idAnimal" aria-label="tipos" name="tipos_@pet.idAnimal">
+                                                    <option value="">Espécies:</option>
+                                                    @foreach (var especie in ViewBag.tipos)
+                                                    {
+                                                        <option value="@especie.Value">@especie.Text</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                            <div class="modal-footer text-center align-content-center justify-content-center">
+                                                <button type="button" class="btn rounded-pill botão1" onclick="redirecionarParaCadastroAnimal('dropdown_@pet.idAnimal')">Cadastrar novo Pet <i class="fa-solid fa-paw"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Modal -->
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-6 text-center mx-auto">
+                                    <h3 class="history-title">Informações Adicionais</h3>
+                                    <ul class="history-item-list">
+                                        @if (pet.Informacoes == null || !pet.Informacoes.Any())
+                                        {
+                                            <li>@pet.nomeAnimal não possui informações adicionais cadastradas</li>
+                                        }
+                                        else
+                                        {
+                                            foreach (var info in pet.Informacoes)
+                                            {
+                                                <li>@info.descInformacao</li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                                <div class="col-6 text-center mx-auto">
+                                    <h3 class="history-title">Cuidados</h3>
+                                    <ul class="history-item-list">
+                                        @if (pet.Cuidados == null || !pet.Cuidados.Any())
+                                        {
+                                            <li>@pet.nomeAnimal não possui cuidados cadastrados</li>
+                                        }
+                                        else
+                                        {
+                                            foreach (var cuidado in pet.Cuidados)
+                                            {
+                                                <li>@cuidado.descCuidado</li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-content-center text-center">
+                            @if (pet.Informacoes == null || !pet.Informacoes.Any())
+                            {
+                                <div class="col-4">
+                                    <a href="@Url.Action("CadastroInformacao", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Cadastrar Info. Adicional <i class="fa-solid fa-pencil"></i></a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-4">
+                                    <a href="@Url.Action("ListarInformacao", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Alterar Info. Adicionais <i class="fa-solid fa-pencil"></i></a>
+                                </div>
+                            }
+                            <div class="col-4">
+                                <a href="@Url.Action("EditarAnimal", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Alterar Dados <i class="fa-solid fa-pencil"></i></a>
+                            </div>
+                            @if (pet.Cuidados == null || !pet.Cuidados.Any())
+                            {
+                                <div class="col-4">
+                                    <a href="@Url.Action("CadastroCuidado", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Cadastrar Cuidado<i class="fa-solid fa-pencil"></i></a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-4">
+                                    <a href="@Url.Action("ListarCuidado", "Animal", new { id = pet.idAnimal })" class="btn btn-custom alterar-btn">Alterar Cuidados <i class="fa-solid fa-pencil"></i></a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carroselPets" data-bs-slide="prev">
+            <i class="fa-solid fa-chevron-left setaE"></i>
+            <span class="visually-hidden">Voltar</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carroselPets" data-bs-slide="next">
+            <i class="fa-solid fa-chevron-right setaD"></i>
+            <span class="visually-hidden">Avançar</span>
+        </button>
+    </div>
+    <script>
+        function redirecionarParaCadastroAnimal(idDropdown) {
+            var especieSelecionada = document.getElementById(idDropdown).value;
+            if (especieSelecionada !== "") {
+                var url = "/Animal/CadastroAnimal/" + especieSelecionada;
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>

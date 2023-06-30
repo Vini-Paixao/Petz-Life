@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Tcc.Areas.Funcionario.Models.modelFormaPagamento>
+
+@{
+    ViewBag.Title = "Lista das Formas de Pagamento";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Lista das Formas de Pagamento</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Nova Forma de Pagamento", "CadFormaPagamento", "FormaPagamento", new { area = "Funcionario" }, new { @class = "btn btn-primary rounded-pill botao-funcionario" })
+</p>
+<table class="table text-center">
+    <tr>
+        <th class="col-4">
+            @Html.DisplayNameFor(model => model.idFormaPagamento)
+        </th>
+        <th class="col-4">
+            @Html.DisplayNameFor(model => model.nomeFormaPagamento)
+        </th>
+        <th class="col-4">Ações</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-4">
+                @Html.DisplayFor(modelItem => item.idFormaPagamento)
+            </td>
+            <td class="col-4">
+                @Html.DisplayFor(modelItem => item.nomeFormaPagamento)
+            </td>
+            <td class="col-4">
+                @Html.ActionLink("Atualizar", "EditarFormaPagamento", new { id = item.idFormaPagamento }) |
+                @Html.ActionLink("Excluir", "ExcluirFormaPagamento", new { id = item.idFormaPagamento }, new { onclick = " return confirm('Deseja realmente excluir?');" })
+            </td>
+        </tr>
+    }
+
+</table>

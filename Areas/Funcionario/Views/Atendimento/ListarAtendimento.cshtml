@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Tcc.Models.modelAtendimento>
+
+@{
+    ViewBag.Title = "Lista de Atendimento -";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Lista de Atendimento</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Novo Atendimento", "CadAtendimento", "Atendimento", new { area = "Funcionario" }, new { @class = "btn btn-primary rounded-pill botao-funcionario" })
+</p>
+<table class="table text-center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idAtendimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataHoraAtendimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descricaoAtendimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeVeterinario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.especVeterinario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeAnimal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeClinica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.logradouroEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cepEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bairroEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cidadeEndereco)
+        </th>
+        <th>Opções</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idAtendimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataHoraAtendimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricaoAtendimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeVeterinario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.especVeterinario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeAnimal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeClinica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.logradouroEndereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numeroEndereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cepEndereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bairroEndereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cidadeEndereco)
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "EditarAtendimento", new { id = item.idAtendimento }) |
+                @Html.ActionLink("Excluir", "ExcluirAtendimento", new { id = item.idAtendimento }, new { onclick = " return confirm('Deseja realmente excluir?');" })
+            </td>
+        </tr>
+    }
+
+</table>

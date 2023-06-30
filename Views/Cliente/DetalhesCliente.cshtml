@@ -1,0 +1,344 @@
+﻿@model IEnumerable<Tcc.Models.modelCliente>
+
+@{
+    ViewBag.Title = "Detalhes do Cliente -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        h2 {
+            color: rgb(69, 161, 255);
+        }
+
+        .info-block {
+            border: 2px solid #CCCCCC;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+            .info-block:hover {
+                transform: scale(1.05);
+                border-color: rgb(131, 192, 255);
+            }
+
+        .info-block-principal {
+            border: 2px solid #CCCCCC;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+            .info-block-principal:hover {
+                border-color: @foreach (var item in Model){@Html.DisplayFor(modelItem => item.corPlano)};
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transform: scale(1.05);
+            }
+
+        .descricao {
+            font-weight: 600;
+            font-size: 25px;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        .dt {
+            font-size: 25px;
+            text-transform: uppercase;
+            color: #6400ff;
+            font-weight: 800;
+        }
+
+        .dd {
+            font-size: 18px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .senha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .senha-oculta {
+            display: none;
+            align-items: center;
+        }
+
+        .senha-visivel {
+            margin-right:10px;
+        }
+
+    .display-name {
+    text-transform: uppercase;
+    color: #6400ff;
+    font-weight: 800;
+    }
+
+    .botao-editar {
+    border: 4px solid #DF83FF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #DF83FF;
+    color: #FFFFFF;
+    border-radius: 30px;
+    transition: 0.3s;
+    text-decoration: none;
+    }
+
+    .botao-editar:hover {
+    transform: scale(1.05);
+    border: 4px solid #DF83FF;
+    background-color: #fff;
+    text-decoration: none;
+    color: #DF83FF;
+    }
+
+    .botao-editar2 {
+    border: 4px solid #DF83FF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #DF83FF;
+    color: #FFFFFF;
+    border-radius: 30px;
+    transition: 0.3s;
+    text-decoration: none;
+    }
+
+    .botao-editar2:hover {
+    transform: scale(1.05);
+    border: 4px solid #DF83FF;
+    background-color: #DF83FF;
+    text-decoration: none;
+    color: #fff;
+    }
+    .imagem-plano{
+    width: 50%;
+    }
+    .titulo-login {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(69, 161, 255);
+    font-weight: 800;
+    }
+
+    .fundo {
+    padding: 30px 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(131, 192, 255, 0.35);
+    border-radius: 30px;
+    width: 90vw;
+    }
+
+    hr {
+    width: 90%;
+    border: none;
+    height: 2px;
+    background: #6400ffff;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="text-center mb-3" style="text-transform: uppercase; color: rgb(69, 161, 255); font-weight: 800; font-size: 50px;">Detalhes do Cliente</h1>
+    <div>
+        <div class="row justify-content-center align-content-center text-center">
+            <!-- Plano -->
+            <div class="info-block-principal col-4 p-3 mx-auto">
+                <div class="text-center">
+                    <h3 class="display-name">
+                        @Html.DisplayNameFor(model => model.nomePlano)
+                    </h3>
+                    @foreach (var item in Model)
+                    {
+                        <div>
+                            <p class="descricao mb-3">
+                                Plano <span style="color: @Html.DisplayFor(modelItem => item.corPlano); font-weight: 700;">
+                                    @Html.DisplayFor(modelItem => item.nomePlano)
+                                </span>
+                            </p>
+                            <img src="@Html.DisplayFor(modelItem => item.imgPlano)" class="imagem-plano" />
+                            <p class="mt-3">
+                                Plano do tipo: <span style="font-weight: 700;">@Html.DisplayFor(modelItem => item.tipoPlano)</span>
+                            </p>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="col-4 mx-auto my-auto">
+                <h4 class="titulo-login mb-4">Informações de Login</h4>
+                <div class="info-block p-5">
+                    <div class="row mb-2">
+                        <div class="col-6 my-auto dt">
+                            @Html.DisplayNameFor(model => model.email)
+                        </div>
+                        <div class="col-6 my-auto dt">
+                            @Html.DisplayNameFor(model => model.senha)
+                        </div>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="row text-center fw-bold">
+                            <div class="col-6 my-auto dd">
+                                @Html.DisplayFor(modelItem => item.email)
+                            </div>
+                            <div class="col-6 my-auto senha dd">
+                                <span id="campo-senha" class="senha-oculta">@Html.DisplayFor(modelItem => item.senha)</span>
+                                <i id="icone-olho" class="fa fa-eye" style="cursor: pointer;" onclick="alternarSenha()"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <a href="@Url.Action("EditarLoginCliente", "Cliente", new { id = item.idLogin })" class="btn btn-custom rounded-pill mt-4 botao-editar">Editar Dados de Acesso</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 mb-3">
+            <h2 style="font-weight: 800">Suas Informações Pessoais e Endereço Cadastrados</h2>
+        </div>
+        <!-- DADOS PESSOAIS -->
+        <div class="fundo">
+            <div class="row text-center mb-3">
+                <div class="col-2 dt">
+                    @Html.DisplayNameFor(model => model.nomeCliente)
+                </div>
+                <div class="col-2 dt">
+                    @Html.DisplayNameFor(model => model.sobrenomeCliente)
+                </div>
+                <div class="col-2 dt">
+                    @Html.DisplayNameFor(model => model.rgCliente)
+                </div>
+                <div class="col-2 dt">
+                    @Html.DisplayNameFor(model => model.cpfCliente)
+                </div>
+                <div class="col-2 dt">
+                    @Html.DisplayNameFor(model => model.telefoneCliente)
+                </div>
+                <div class="col-2 dt">
+                    @Html.DisplayNameFor(model => model.celularCliente)
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="row text-center">
+                    <div class="col-2 dd">
+                        @Html.DisplayFor(modelItem => item.nomeCliente)
+                    </div>
+                    <div class="col-2 dd">
+                        @Html.DisplayFor(modelItem => item.sobrenomeCliente)
+                    </div>
+                    <div class="col-2 dd">
+                        @Html.DisplayFor(modelItem => item.rgCliente)
+                    </div>
+                    <div class="col-2 dd">
+                        @Html.DisplayFor(modelItem => item.cpfCliente)
+                    </div>
+                    <div class="col-2 dd">
+                        @Html.DisplayFor(modelItem => item.telefoneCliente)
+                    </div>
+                    <div class="col-2 dd">
+                        @Html.DisplayFor(modelItem => item.celularCliente)
+                    </div>
+                </div>
+                <div class="col-12 text-center mb-5">
+                    <a href="@Url.Action("EditarCliente", "Cliente", new { id = item.idCliente })" class="btn btn-custom rounded-pill mt-3 botao-editar2">Editar Informações Pessoais</a>
+                </div>
+            }
+            <!-- ENDEREÇO -->
+            <div class="row text-center mb-3">
+                <div class="col-3 dt">
+                    @Html.DisplayNameFor(model => model.nomeEndereco)
+                </div>
+                <div class="col-3 dt">
+                    @Html.DisplayNameFor(model => model.logradouroEndereco)
+                </div>
+                <div class="col-3 dt">
+                    @Html.DisplayNameFor(model => model.numeroEndereco)
+                </div>
+                <div class="col-3 dt">
+                    @Html.DisplayNameFor(model => model.complementoEndereco)
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="row text-center">
+                    <div class="col-3 dd">
+                        @Html.DisplayFor(modelItem => item.nomeEndereco)
+                    </div>
+                    <div class="col-3 dd">
+                        @Html.DisplayFor(modelItem => item.logradouroEndereco)
+                    </div>
+                    <div class="col-3 dd">
+                        @Html.DisplayFor(modelItem => item.numeroEndereco)
+                    </div>
+                    <div class="col-3 dd">
+                        @Html.DisplayFor(modelItem => item.complementoEndereco)
+                    </div>
+                </div>
+
+            }
+            <hr class="mx-auto" />
+            <div class="row text-center mb-3">
+                <div class="col-3 dt">
+                    @Html.DisplayNameFor(model => model.cepEndereco)
+                </div>
+                <div class="col-3 dt">
+                    @Html.DisplayNameFor(model => model.bairroEndereco)
+                </div>
+                <div class="col-3 dt">
+                    @Html.DisplayNameFor(model => model.cidadeEndereco)
+                </div>
+                <div class="col-3 dt">
+                    @Html.DisplayNameFor(model => model.siglaEstado)
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="row text-center">
+                    <div class="col-3 dd">
+                        @Html.DisplayFor(modelItem => item.cepEndereco)
+                    </div>
+                    <div class="col-3 dd">
+                        @Html.DisplayFor(modelItem => item.bairroEndereco)
+                    </div>
+                    <div class="col-3 dd">
+                        @Html.DisplayFor(modelItem => item.cidadeEndereco)
+                    </div>
+                    <div class="col-3 dd">
+                        @Html.DisplayFor(modelItem => item.siglaEstado)
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <a href="@Url.Action("EditarEnderecoCliente", "Cliente", new { @area = "", id = item.idEndereco })" class="btn btn-custom rounded-pill botao-editar2">Editar Endereço</a>
+                </div>
+            }
+        </div>
+    </div>
+    <script>
+        function alternarSenha() {
+            var campoSenha = document.getElementById("campo-senha");
+            var iconeOlho = document.getElementById("icone-olho");
+
+            if (campoSenha.classList.contains("senha-oculta")) {
+                campoSenha.classList.remove("senha-oculta");
+                campoSenha.classList.add("senha-visivel");
+                iconeOlho.classList.remove("fa-eye");
+                iconeOlho.classList.add("fa-eye-slash");
+            } else {
+                campoSenha.classList.remove("senha-visivel");
+                campoSenha.classList.add("senha-oculta");
+                iconeOlho.classList.remove("fa-eye-slash");
+                iconeOlho.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,142 @@
+﻿@model Tcc.Models.modelLogin
+@{
+    ViewBag.Title = "Login - ";
+}
+@ViewBag.confCadastro
+@ViewBag.msgLogar
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Arquivos Login/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Arquivos Login/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Arquivos Login/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Arquivos Login/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Arquivos Login/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Arquivos Login/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/Arquivos Login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Arquivos Login/css/main.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <style>
+        .password-toggle {
+            position: relative;
+        }
+
+        .toggle-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+            .toggle-icon i {
+                font-size: 18px;
+            }
+    </style>
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form validate-form">
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    {
+                        <fieldset>
+                            <h1 class="text-center" style="text-transform: uppercase; font-weight: bold; color: #6400FF">Seja bem-vindo</h1>
+                            <br />
+                            <div class="wrap-input100 validate-input">
+                                @Html.EditorFor(x => x.email, new
+                           {
+                               htmlAttributes = new
+                               {
+                                   id = "txtUsuario",
+                                   name = "txtUsuario",
+                                   type = "text",
+                                   placeholder = "Digite o usuário",
+                                   required = "required",
+                                   maxlength = "30",
+                                   @class = "input100"
+                               }
+                           })
+                                <span class="focus-input100" data-placeholder="&#xe82a;">@*<i class="fas fa-envelope"></i>*@</span>
+                                @Html.ValidationMessageFor(x => x.email, "", new { @class = "text-danger" })
+                            </div>
+                            <br />
+                            @*<div class="wrap-input100 validate-input">
+                                     @Html.EditorFor(x => x.senha, new
+                                {
+                                    htmlAttributes = new
+                                    {
+                                        id = "txtSenha",
+                                        name = "txtSenha",
+                                        type = "password",
+                                        placeholder = "Digite sua senha",
+                                        required = "required",
+                                        maxlength = "10",
+                                        @class = "input100"
+                                    }
+                                })
+                                     <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                                     @Html.ValidationMessageFor(x => x.senha, "", new { @class = "text-danger" })
+
+                                 </div>*@
+                            <div class="password-toggle">
+                                @Html.EditorFor(x => x.senha, new
+                                {
+                                    htmlAttributes = new
+                                    {
+                                        id = "txtSenha",
+                                        name = "txtSenha",
+                                        type = "password",
+                                        placeholder = "Digite sua senha",
+                                        required = "required",
+                                        maxlength = "10",
+                                        @class = "input100"
+                                    }
+                                })
+                                <span class="toggle-icon" onclick="togglePasswordVisibility()">
+                                    <i class="lnr lnr-eye" id="eye-icon"></i>
+                                </span>
+                                @Html.ValidationMessageFor(x => x.senha, "", new { @class = "text-danger" })
+                            </div>
+
+
+                            <br />
+                            <div class="container-login100-form-btn m-t-32">
+                                <button class="login100-form-btn">
+                                    Login
+                                </button>
+                            </div>
+                        </fieldset>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dropDownSelect1"></div>
+    <script src="~/Arquivos Login/vendor/animsition/js/animsition.min.js"></script>
+    <script src="~/Arquivos Login/vendor/select2/select2.min.js"></script>
+    <script src="~/Arquivos Login/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/Arquivos Login/vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="~/Arquivos Login/vendor/countdowntime/countdowntime.js"></script>
+    <script src="~/Arquivos Login/js/main.js"></script>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("txtSenha");
+            var eyeIcon = document.getElementById("eye-icon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("lnr-eye");
+                eyeIcon.classList.add("lnr-sun");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("lnr-sun");
+                eyeIcon.classList.add("lnr-eye");
+            }
+        }
+    </script>
+
+</body>
+</html>

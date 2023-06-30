@@ -1,0 +1,337 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Petz-Life</title>
+    <link rel="icon" type="image/x-icon" href="~/Imagens/favicon.png">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/9040baff3f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        li a {
+            color: #000000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            li a:hover {
+                color: #ffffff;
+            }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1 0 auto;
+        }
+
+        .footer {
+            flex-shrink: 0;
+            padding: 10px,10px,0,10px;
+        }
+
+        footer {
+            background-color: #67B2FF;
+            width: 100%;
+        }
+
+        .footer .row {
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul.list-inline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        .nav-item {
+            font-weight: 500;
+            font-size: 25px
+        }
+
+        .nav-link {
+            margin-right: 30px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            color: #83C0FF;
+        }
+
+            .nav-link:hover {
+                text-transform: uppercase;
+                color: #A56BFF;
+            }
+
+        .botão1 {
+            background-color: #A56BFF;
+            border: 3px solid #A56BFF;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+            .botão1:hover {
+                border: 3px solid #A56BFF;
+                background-color: #ffffff;
+                color: #A56BFF;
+                transform: scale(1.05);
+            }
+
+        .botao-funcionario {
+            background-color: #A56BFF;
+            border: 3px solid #A56BFF;
+            color: #ffffff;
+            width: auto;
+            height: auto;
+            padding: 5px 10px;
+            transition: 0.3s;
+        }
+
+            .botao-funcionario:hover {
+                width: auto;
+                height: auto;
+                padding: 5px 10px;
+                border: 3px solid #A56BFF;
+                background-color: #ffffff;
+                color: #A56BFF;
+                transform: scale(1.05);
+            }
+
+        .titulo-funcionario {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6400FF;
+            font-size: 40px
+        }
+
+        .botão2 {
+            background-color: #A56BFF;
+            border: 3px solid #A56BFF;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+            .botão2:hover {
+                border: 3px solid #A56BFF;
+                background-color: #ffffff;
+                color: #A56BFF;
+                transform: scale(1.05);
+            }
+
+        .link-footer {
+            color: #000000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            .link-footer:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+        .icons {
+            display: inline-flex;
+            column-gap: 25px;
+        }
+
+        .icon {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #000;
+            border-radius: 50%;
+            outline: 2px solid #000;
+            transition-property: outline-offset, outline-color, background-color;
+            transition-duration: 0.25s;
+        }
+
+            .icon:hover {
+                outline-color: #fff;
+                outline-offset: 4px;
+            }
+
+            .icon i {
+                margin: auto;
+            }
+
+            .icon:hover i {
+                color: #fff;
+                animation: shake 0.25s;
+            }
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .floating-btn {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #25D366;
+            color: #FFFFFF;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+            .floating-btn:hover {
+                transform: scale(1.05);
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+        .floating-btn-top {
+            background-color: #6400FF;
+        }
+
+            .floating-btn-top:hover {
+                background-color: #5b00e6;
+            }
+
+            .floating-btn-top i {
+                font-size: 15px;
+                vertical-align: middle;
+            }
+
+
+        @@keyframes shake {
+            10% {
+                transform: rotate(15deg);
+            }
+
+            20% {
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                transform: rotate(15deg);
+            }
+
+            40% {
+                transform: rotate(-15deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+        <div class="container-fluid col-11">
+            <a class="navbar-brand" href="@Url.Action("Index", "Principal", new { area = "Funcionario" })" style="margin-right: 10px; padding: 0;">
+                <img src="~/Imagens/Logo.png" style="width: 150px;" />
+            </a>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="border-bottom: 1px solid #d9c1ff; padding-bottom: 10px">
+                <ul class="navbar-nav col-9 text-center">
+                    <li class="nav-item col-2 offset-2">@Html.ActionLink("Planos", "ListarPlano", "Plano", new { area = "Funcionario" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item col-2">@Html.ActionLink("Clinícas", "ListarClinica", "Clinica", new { area = "Funcionario" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item col-3">@Html.ActionLink("Atendimentos", "ListarAtendimento", "Atendimento", new { area = "Funcionario" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item col-3">@Html.ActionLink("Veterinários", "ListarVeterinario", "Veterinario", new { area = "Funcionario" }, new { @class = "nav-link" })</li>
+                </ul>
+                <div class="d-grid gap-2 d-md-block">
+                    <a href="@Url.Action("Index", "Home", new { area = "" })" class="btn btn-custom rounded-pill botão2">Log-Out <i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="content">
+            <div class="container-fluid body-content col-11">
+                @RenderBody()
+                <br />
+            </div>
+        </div>
+        <footer class="text-black text-center p-4">
+            <div class="container-fluid footer">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <a href="https://goo.gl/maps/UBzgN4ErzhgczoAd8" target="_blank" class="link-footer">
+                            <li style="margin-bottom:10px"><i class="fas fa-map-marker-alt fa-lg"></i> Av. Paulista, 1374 - Bela Vista, SP/SP</li></a>
+                            <a href="mailto:contato@petzlife.com.br" target="_blank" class="link-footer">
+                            <li style="margin-bottom:10px"><i class="fas fa-envelope fa-lg"></i> contato@petzlife.com.br</li></a>
+                            <a href="tel:(11)%2032442898" target="_blank" class="link-footer">
+                            <li><i class="fas fa-phone-flip fa-lg"></i> (11) 3244-2898</li></a>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="icons mb-3">
+                            <a href="https://www.instagram.com/" target="_blank" class="icon icon--instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="icon icon--twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="https://br.linkedin.com/" target="_blank" class="icon icon--linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank" class="icon icon--facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/" target="_blank" class="icon icon--tiktok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                        <p><b>&copy; - 2023 Petz-Life. Todos os direitos reservados.</b></p>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-unstyled" style="padding-top:10px">
+                            <li>@Html.ActionLink("Planos", "ListarPlano", "Plano", new { area = "Funcionario" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Benefícios", "ListarBeneficio", "Beneficio", new { area = "Funcionario" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Tipos de Animal", "ListarTipo", "Tipo", new { area = "Funcionario" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Raças", "ListarRaca", "Raca", new { area = "Funcionario" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Clinicas", "ListarClinica", "Clinica", new { area = "Funcionario" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Veterinários", "ListarVeterinario", "Veterinario", new { area = "Funcionario" }, new { @class = "" })</li>
+                            <li>@Html.ActionLink("Atendimentos", "ListarAtendimento", "Atendimento", new { area = "Funcionario" }, new { @class = "" })</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="floating-buttons">
+                    <a href="#" class="floating-btn floating-btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                        <i class="fa-solid fa-chevron-up fa-bounce"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

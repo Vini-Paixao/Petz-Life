@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Tcc.Models.modelInformacao>
+
+@{
+    ViewBag.Title = "Lista de Informações Adicionais -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        .tituloss {
+            color: rgb(69, 161, 255);
+            font-size: 40px;
+        }
+
+        .fundo {
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgba(131, 192, 255, 0.35);
+            border-radius: 30px;
+        }
+
+        hr {
+            margin-left: 25%;
+            width: 50%;
+            border: none;
+            height: 2px;
+            background: #6400ffff;
+        }
+
+        .informacao {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .icone1 {
+            color: #6400FF;
+        }
+
+        .icone2 {
+            color: rgb(255,0,0);
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center titulos">Lista das Informações Adicionais</h2>
+    <div class="container text-center mt-3 mb-5">
+        <div class="row">
+            <h3 class="tituloss">Qual informação deseja realizar uma alteração?</h3>
+        </div>
+        <div class="col-4 offset-4 fundo pt-2 pb-2 my-3">
+            @foreach (var item in Model)
+            {
+                <div class="row">
+                    <div class="my-4">
+                        <div class="informacao mb-3">@Html.DisplayFor(modelItem => item.descInformacao)</div>
+                        <a href="@Url.Action("EditarInformacao", "Animal", new { id = item.idInformacao })"><i class="fa-solid fa-pencil icone1"></i> <span class="icone1">Alterar</span></a> /
+                        <a href="@Url.Action("ExcluirInformacao", "Animal", new { id = item.idInformacao })" onclick="alert('Deseja realmente excluir?')"><i class="fa-solid fa-trash icone2"></i> <span class="icone2">Apagar</span></a>
+                    </div>
+                </div>
+                ViewBag.Animal = item.idAnimal;
+            }
+        </div>
+        <br />
+        <div class="row col-12 d-inline-flex text-center">
+            <div class="text-center fw-bolder col-md-3 offset-md-3">
+                <a href="@Url.Action("Index", "Animal", new { @area = "", id = Session["idLogado"] } )" class="btn btn-custom botao-cancel text-center rounded-pill fw-bolder">
+                    <i class="fa-solid fa-xmark"></i> Cancelar/Voltar
+                </a>
+            </div>
+            <div class="text-center fw-bolder col-md-3">
+                <a href="@Url.Action("CadastroInformacao", "Animal", new { @area = "", id =  ViewBag.Animal })" class="btn btn-success text-center botão1 rounded-pill fw-bolder">
+                    <i class="fa-solid fa-plus"></i> Novo Cuidado
+                </a>
+            </div>
+        </div>
+    </div>
+</body>

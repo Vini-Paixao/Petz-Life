@@ -1,0 +1,74 @@
+﻿@model Tcc.Models.modelAnimal
+
+@{
+    ViewBag.Title = "Alteração cadastral Pet -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulos">Alteração das Informações do Pet</h2>
+
+@using (Html.BeginForm("EditarAnimal", "Animal", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal fundo p-5 my-4 was-validated">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(model => model.idAnimal)
+        <div class="form-group text-center fw-bolder ">
+            <label class="control-label col-md-12" for="nomeAnimal">@Html.LabelFor(model => model.nomeAnimal)</label>
+            <div class="col-md-4 offset-md-4 pt-2">
+                <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="nomeAnimal" id="nomeAnimal" value="@Model.nomeAnimal" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            <label class="control-label col-md-12" for="apelidoAnimal">@Html.LabelFor(model => model.apelidoAnimal)</label>
+            <div class="col-md-4 offset-md-4 pt-2">
+                <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="apelidoAnimal" id="apelidoAnimal" value="@Model.apelidoAnimal" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            <label class="control-label col-md-12" for="idadeAnimal">@Html.LabelFor(model => model.idadeAnimal)</label>
+            <div class="col-md-4 offset-md-4 pt-2">
+                <input class="form-control d-inline-flex text-center" required type="number" name="idadeAnimal" id="idadeAnimal" value="@Model.idadeAnimal" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            <div>
+                <label class="control-label col-md-12" for="imgAnimal">Imagem do Pet</label>
+            </div>
+            <div class="col-md-4 offset-md-4 pt-2">
+                <input class="form-control d-inline-flex text-center" required type="file" name="imgAnimal" id="imgAnimal" value="@Model.imgAnimal" /><br />
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center fw-bolder">
+            <div>
+                <label class="control-label col-md-12" for="racas">@Html.LabelFor(model => model.nomeRaca)</label>
+            </div>
+            <div class="col-md-4 offset-md-4 mb-5 text-center pt-2">
+                <select class="form-select d-inline-flex text-center" required aria-label="racas" name="racas">
+                    <option value="">Escolha a Raça</option>
+                    @foreach (var racasPet in ViewBag.racas)
+                    {
+                        <option value="@racasPet.Value">@racasPet.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <br />
+        <div class="form-group col-12 d-inline-flex text-center">
+            <div class="text-center col-md-3 offset-md-3">
+                <a href="@Url.Action("Index", "Animal", new { @area = "", id = Model.idLogin })" class="btn btn-custom botao-cancel text-center rounded-pill fw-bolder">
+                    <i class="fa-solid fa-xmark"></i> Cancelar/Voltar
+                </a>
+            </div>
+            <div class="text-center col-md-3">
+                <button type="submit" class="btn btn-custom rounded-pill fw-bolder botão1"><i class="fa-solid fa-pen"></i> Alterar Informações</button>
+            </div>
+        </div>
+    </div>
+}

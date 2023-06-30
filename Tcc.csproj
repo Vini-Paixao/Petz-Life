@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BBD1E54-8340-41D6-B2E5-14F98BAC9C6C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tcc</RootNamespace>
+    <AssemblyName>Tcc</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.33\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\AtendimentoController.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\BeneficioController.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\ClinicaController.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\EnderecoController.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\PrincipalController.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\PlanoController.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\RacaController.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\TipoController.cs" />
+    <Compile Include="Areas\Funcionario\Controllers\VeterinarioController.cs" />
+    <Compile Include="Areas\Funcionario\Dados\acBeneficio.cs" />
+    <Compile Include="Areas\Funcionario\Dados\acClinica.cs" />
+    <Compile Include="Areas\Funcionario\Dados\acEndereco.cs" />
+    <Compile Include="Areas\Funcionario\Dados\acPlano.cs" />
+    <Compile Include="Areas\Funcionario\Dados\acRaca.cs" />
+    <Compile Include="Areas\Funcionario\Dados\acTipo.cs" />
+    <Compile Include="Areas\Funcionario\Dados\acVeterinario.cs" />
+    <Compile Include="Areas\Funcionario\FuncionarioAreaRegistration.cs" />
+    <Compile Include="Areas\Funcionario\Models\modelBeneficio.cs" />
+    <Compile Include="Areas\Funcionario\Models\modelClinica.cs" />
+    <Compile Include="Areas\Funcionario\Models\modelEndereco.cs" />
+    <Compile Include="Areas\Funcionario\Models\modelPlano.cs" />
+    <Compile Include="Areas\Funcionario\Models\modelRaca.cs" />
+    <Compile Include="Areas\Funcionario\Models\modelTipo.cs" />
+    <Compile Include="Areas\Funcionario\Models\modelVeterinario.cs" />
+    <Compile Include="Controllers\AnimalController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ContratacaoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Dados\acAnimal.cs" />
+    <Compile Include="Dados\acAtendimento.cs" />
+    <Compile Include="Dados\acCliente.cs" />
+    <Compile Include="Dados\acCuidado.cs" />
+    <Compile Include="Dados\acInformacao.cs" />
+    <Compile Include="Dados\acLogin.cs" />
+    <Compile Include="Dados\Conexao.cs" />
+    <Compile Include="Models\ClinicaViewModel.cs" />
+    <Compile Include="Models\modelAtendimento.cs" />
+    <Compile Include="Models\modelCuidado.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnimalViewModel.cs" />
+    <Compile Include="Models\modelAnimal.cs" />
+    <Compile Include="Models\modelCliente.cs" />
+    <Compile Include="Models\modelInformacao.cs" />
+    <Compile Include="Models\modelLogin.cs" />
+    <Compile Include="Models\PlanoBeneficiosViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Arquivos Login\css\main.css" />
+    <Content Include="Arquivos Login\css\util.css" />
+    <Content Include="Arquivos Login\js\main.js" />
+    <Content Include="Arquivos Login\vendor\animate\animate.css" />
+    <Content Include="Arquivos Login\vendor\animsition\css\animsition.css" />
+    <Content Include="Arquivos Login\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Arquivos Login\vendor\animsition\js\animsition.js" />
+    <Content Include="Arquivos Login\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Arquivos Login\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Arquivos Login\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Arquivos Login\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Arquivos Login\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Arquivos Login\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Arquivos Login\vendor\daterangepicker\moment.js" />
+    <Content Include="Arquivos Login\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Arquivos Login\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Arquivos Login\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Arquivos Login\vendor\select2\select2.css" />
+    <Content Include="Arquivos Login\vendor\select2\select2.js" />
+    <Content Include="Arquivos Login\vendor\select2\select2.min.css" />
+    <Content Include="Arquivos Login\vendor\select2\select2.min.js" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Imagens\1.png" />
+    <Content Include="Imagens\2.png" />
+    <Content Include="Imagens\24-horas.png" />
+    <Content Include="Imagens\3.png" />
+    <Content Include="Imagens\4.png" />
+    <Content Include="Imagens\5.png" />
+    <Content Include="Imagens\6.png" />
+    <Content Include="Imagens\cachorro e gato.png" />
+    <Content Include="Imagens\cachorro e pata.png" />
+    <Content Include="Imagens\cachorro feliz.png" />
+    <Content Include="Imagens\cachorro triste.png" />
+    <Content Include="Imagens\cachorro-veterinario.png" />
+    <Content Include="Imagens\Cachorro.png" />
+    <Content Include="Imagens\CachorroNãoTãoBonito.png" />
+    <Content Include="Imagens\CachorroSafado.png" />
+    <Content Include="Imagens\cadastro animal.png" />
+    <Content Include="Imagens\Calopsita.png" />
+    <Content Include="Imagens\clinica-veterinaria.png" />
+    <Content Include="Imagens\clinicas.jpg" />
+    <Content Include="Imagens\Coelho.png" />
+    <Content Include="Imagens\dados.png" />
+    <Content Include="Imagens\email.jpg" />
+    <Content Include="Imagens\email.png" />
+    <Content Include="Imagens\endereco.jpg" />
+    <Content Include="Imagens\endereco.png" />
+    <Content Include="Imagens\favicon.png" />
+    <Content Include="Imagens\Ferret.png" />
+    <Content Include="Imagens\gato-dormindo.png" />
+    <Content Include="Imagens\Gato.png" />
+    <Content Include="Imagens\informacoes.png" />
+    <Content Include="Imagens\login.png" />
+    <Content Include="Imagens\Logo.png" />
+    <Content Include="Imagens\manutencao.png" />
+    <Content Include="Imagens\Papagaio.png" />
+    <Content Include="Imagens\Peixe.png" />
+    <Content Include="Imagens\Pessoa 1.jpg" />
+    <Content Include="Imagens\Pessoa 2.jpg" />
+    <Content Include="Imagens\Pessoa 3.jpg" />
+    <Content Include="Imagens\Pessoa 4.jpg" />
+    <Content Include="Imagens\Pessoa 5.jpg" />
+    <Content Include="Imagens\Pessoa 6.jpg" />
+    <Content Include="Imagens\Plano 1.png" />
+    <Content Include="Imagens\Plano 2.png" />
+    <Content Include="Imagens\Plano 3.png" />
+    <Content Include="Imagens\Plano 4.png" />
+    <Content Include="Imagens\Plano 5.png" />
+    <Content Include="Imagens\Plano 6.png" />
+    <Content Include="Imagens\Plano_Ruby.png" />
+    <Content Include="Imagens\senha.jpg" />
+    <Content Include="Imagens\senha.png" />
+    <Content Include="Imagens\Standardchinchilla.jpg" />
+    <Content Include="Imagens\veterinarios com dog.png" />
+    <Content Include="Imagens\Ícone 2.png" />
+    <Content Include="Imagens\Ícone 3.png" />
+    <Content Include="Imagens\Ícone 4.png" />
+    <Content Include="Imagens\Ícone.png" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Funcionario\Views\web.config" />
+    <Content Include="Areas\Funcionario\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Principal\Index.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Plano\CadPlano.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Plano\ListarPlano.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Plano\EditarPlano.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Beneficio\CadBeneficio.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Beneficio\ListarBeneficio.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Beneficio\EditarBeneficio.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Tipo\CadTipo.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Tipo\ListarTipo.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Tipo\EditarTipo.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Raca\CadRaca.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Raca\ListarRaca.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Raca\EditarRaca.cshtml" />
+    <Content Include="Areas\Funcionario\Views\FormaPagamento\CadFormaPagamento.cshtml" />
+    <Content Include="Areas\Funcionario\Views\FormaPagamento\ListarFormaPagamento.cshtml" />
+    <Content Include="Areas\Funcionario\Views\FormaPagamento\EditarFormaPagamento.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Clinica\CadClinica.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Clinica\ListarClinica.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Clinica\EditarClinica.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Veterinario\CadVeterinario.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Veterinario\ListarVeterinario.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Veterinario\EditarVeterinario.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Endereco\CadEndereco.cshtml" />
+    <Content Include="Views\Contratacao\CadEnderecoCliente.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Endereco\ListarEnderecoPorId.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Endereco\EditarEndereco.cshtml" />
+    <Content Include="Views\Cliente\EditarEnderecoCliente.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Atendimento\ListarAtendimento.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Atendimento\CadAtendimento.cshtml" />
+    <Content Include="Areas\Funcionario\Views\Atendimento\EditarAtendimento.cshtml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Sobre.cshtml" />
+    <Content Include="Views\Home\PoliticasPrivacidade.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Planos.cshtml" />
+    <Content Include="Views\Home\DetalhesPlano.cshtml" />
+    <Content Include="Views\Home\Clinicas.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Historico.cshtml" />
+    <Content Include="Views\Contratacao\CadLoginCliente.cshtml" />
+    <Content Include="Views\Animal\Index.cshtml" />
+    <Content Include="Views\Cliente\DetalhesCliente.cshtml" />
+    <Content Include="Views\Cliente\EditarCliente.cshtml" />
+    <Content Include="Views\Animal\EditarAnimal.cshtml" />
+    <Content Include="Views\Cliente\EditarLoginCliente.cshtml" />
+    <Content Include="Views\Animal\ListarCuidado.cshtml" />
+    <Content Include="Views\Animal\CadastroCuidado.cshtml" />
+    <Content Include="Views\Animal\EditarCuidado.cshtml" />
+    <Content Include="Views\Animal\ListarInformacao.cshtml" />
+    <Content Include="Views\Animal\CadastroInformacao.cshtml" />
+    <Content Include="Views\Animal\EditarInformacao.cshtml" />
+    <Content Include="Views\Animal\CadastroAnimal.cshtml" />
+    <Content Include="Views\Contratacao\CadCliente.cshtml" />
+    <Content Include="Views\Contratacao\CadAnimal.cshtml" />
+    <Content Include="Views\Cliente\AgendarConsulta.cshtml" />
+    <Content Include="Views\Cliente\Agenda.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Funcionario\Data\" />
+    <Folder Include="Arquivos Login\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60191</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44301/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

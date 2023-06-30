@@ -1,0 +1,555 @@
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Tcc.dll.config
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Tcc.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Tcc.pdb
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\csc.exe
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\csc.exe.config
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\csc.rsp
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\csi.exe
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\csi.exe.config
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\csi.rsp
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CSharp.Core.targets
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.Managed.Core.targets
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.Win32.Primitives.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.AppContext.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Collections.Immutable.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Console.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Diagnostics.StackTrace.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Globalization.Calendars.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.IO.Compression.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.IO.Compression.ZipFile.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.IO.FileSystem.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Net.Http.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Net.Sockets.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Reflection.Metadata.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Text.Encoding.CodePages.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.ValueTuple.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Xml.ReaderWriter.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Xml.XmlDocument.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Xml.XPath.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\System.Xml.XPath.XDocument.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\vbc.exe
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\vbc.exe.config
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\vbc.rsp
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\VBCSCompiler.exe
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\roslyn\VBCSCompiler.exe.config
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Antlr3.Runtime.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Microsoft.Web.Infrastructure.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Newtonsoft.Json.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.Helpers.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.Mvc.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.Optimization.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.Razor.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.WebPages.Deployment.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.WebPages.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.WebPages.Razor.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\WebGrease.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.Helpers.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.Mvc.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.Optimization.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.Razor.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.WebPages.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.WebPages.Deployment.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Web.WebPages.Razor.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Newtonsoft.Json.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Antlr3.Runtime.pdb
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\pt-br\System.Web.Helpers.resources.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\pt-br\System.Web.Mvc.resources.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\pt-br\System.Web.Optimization.resources.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\pt-br\System.Web.Razor.resources.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\pt-br\System.Web.WebPages.resources.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\obj\Debug\Tcc.csproj.AssemblyReference.cache
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\obj\Debug\Tcc.csproj.CoreCompileInputs.cache
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\obj\Debug\Tcc.csproj.CopyComplete
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\obj\Debug\Tcc.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\obj\Debug\Tcc.pdb
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\BouncyCastle.Crypto.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Google.Protobuf.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\K4os.Compression.LZ4.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\K4os.Compression.LZ4.Streams.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\K4os.Hash.xxHash.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\MySql.Data.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Buffers.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.IO.Pipelines.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Memory.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Numerics.Vectors.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Runtime.CompilerServices.Unsafe.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Threading.Tasks.Extensions.dll
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\BouncyCastle.Crypto.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Google.Protobuf.pdb
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\Google.Protobuf.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\K4os.Compression.LZ4.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\K4os.Compression.LZ4.Streams.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\K4os.Hash.xxHash.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\MySql.Data.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Buffers.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.IO.Pipelines.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Memory.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Numerics.Vectors.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Runtime.CompilerServices.Unsafe.xml
+I:\Backup - SSD\Etec\3 Modulo\TCC\Asp NET\Tcc\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\marcu\Downloads\Tcc\bin\Tcc.dll.config
+C:\Users\marcu\Downloads\Tcc\bin\Tcc.dll
+C:\Users\marcu\Downloads\Tcc\bin\Tcc.pdb
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\csc.exe
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\csc.exe.config
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\csc.rsp
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\csi.exe
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\csi.exe.config
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\csi.rsp
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.AppContext.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Console.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.IO.Compression.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Net.Http.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Net.Sockets.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.ValueTuple.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Xml.XPath.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\vbc.exe
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\vbc.exe.config
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\vbc.rsp
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\VBCSCompiler.exe
+C:\Users\marcu\Downloads\Tcc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\marcu\Downloads\Tcc\bin\Antlr3.Runtime.dll
+C:\Users\marcu\Downloads\Tcc\bin\BouncyCastle.Crypto.dll
+C:\Users\marcu\Downloads\Tcc\bin\Google.Protobuf.dll
+C:\Users\marcu\Downloads\Tcc\bin\K4os.Compression.LZ4.dll
+C:\Users\marcu\Downloads\Tcc\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\marcu\Downloads\Tcc\bin\K4os.Hash.xxHash.dll
+C:\Users\marcu\Downloads\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\marcu\Downloads\Tcc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\marcu\Downloads\Tcc\bin\MySql.Data.dll
+C:\Users\marcu\Downloads\Tcc\bin\Newtonsoft.Json.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Buffers.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.IO.Pipelines.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Memory.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Numerics.Vectors.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.Helpers.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.Mvc.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.Optimization.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.Razor.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.WebPages.dll
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.WebPages.Razor.dll
+C:\Users\marcu\Downloads\Tcc\bin\WebGrease.dll
+C:\Users\marcu\Downloads\Tcc\bin\BouncyCastle.Crypto.xml
+C:\Users\marcu\Downloads\Tcc\bin\Google.Protobuf.pdb
+C:\Users\marcu\Downloads\Tcc\bin\Google.Protobuf.xml
+C:\Users\marcu\Downloads\Tcc\bin\K4os.Compression.LZ4.xml
+C:\Users\marcu\Downloads\Tcc\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\marcu\Downloads\Tcc\bin\K4os.Hash.xxHash.xml
+C:\Users\marcu\Downloads\Tcc\bin\MySql.Data.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Buffers.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.IO.Pipelines.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Memory.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Numerics.Vectors.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.Helpers.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.Mvc.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.Optimization.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.Razor.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.WebPages.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\marcu\Downloads\Tcc\bin\System.Web.WebPages.Razor.xml
+C:\Users\marcu\Downloads\Tcc\bin\Newtonsoft.Json.xml
+C:\Users\marcu\Downloads\Tcc\bin\Antlr3.Runtime.pdb
+C:\Users\marcu\Downloads\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\marcu\Downloads\Tcc\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\marcu\Downloads\Tcc\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\marcu\Downloads\Tcc\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\marcu\Downloads\Tcc\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\marcu\Downloads\Tcc\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\marcu\Downloads\Tcc\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\marcu\Downloads\Tcc\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\marcu\Downloads\Tcc\obj\Debug\Tcc.csproj.AssemblyReference.cache
+C:\Users\marcu\Downloads\Tcc\obj\Debug\Tcc.csproj.CoreCompileInputs.cache
+C:\Users\marcu\Downloads\Tcc\obj\Debug\Tcc.csproj.CopyComplete
+C:\Users\marcu\Downloads\Tcc\obj\Debug\Tcc.dll
+C:\Users\marcu\Downloads\Tcc\obj\Debug\Tcc.pdb
+D:\ETEC\Tcc\bin\Tcc.dll.config
+D:\ETEC\Tcc\bin\Tcc.dll
+D:\ETEC\Tcc\bin\Tcc.pdb
+D:\ETEC\Tcc\bin\roslyn\csc.exe
+D:\ETEC\Tcc\bin\roslyn\csc.exe.config
+D:\ETEC\Tcc\bin\roslyn\csc.rsp
+D:\ETEC\Tcc\bin\roslyn\csi.exe
+D:\ETEC\Tcc\bin\roslyn\csi.exe.config
+D:\ETEC\Tcc\bin\roslyn\csi.rsp
+D:\ETEC\Tcc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ETEC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ETEC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ETEC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ETEC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ETEC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ETEC\Tcc\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ETEC\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ETEC\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ETEC\Tcc\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ETEC\Tcc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ETEC\Tcc\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\ETEC\Tcc\bin\roslyn\System.AppContext.dll
+D:\ETEC\Tcc\bin\roslyn\System.Collections.Immutable.dll
+D:\ETEC\Tcc\bin\roslyn\System.Console.dll
+D:\ETEC\Tcc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\ETEC\Tcc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ETEC\Tcc\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ETEC\Tcc\bin\roslyn\System.Globalization.Calendars.dll
+D:\ETEC\Tcc\bin\roslyn\System.IO.Compression.dll
+D:\ETEC\Tcc\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\ETEC\Tcc\bin\roslyn\System.IO.FileSystem.dll
+D:\ETEC\Tcc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ETEC\Tcc\bin\roslyn\System.Net.Http.dll
+D:\ETEC\Tcc\bin\roslyn\System.Net.Sockets.dll
+D:\ETEC\Tcc\bin\roslyn\System.Reflection.Metadata.dll
+D:\ETEC\Tcc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ETEC\Tcc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ETEC\Tcc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ETEC\Tcc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ETEC\Tcc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ETEC\Tcc\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ETEC\Tcc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ETEC\Tcc\bin\roslyn\System.ValueTuple.dll
+D:\ETEC\Tcc\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ETEC\Tcc\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ETEC\Tcc\bin\roslyn\System.Xml.XPath.dll
+D:\ETEC\Tcc\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ETEC\Tcc\bin\roslyn\vbc.exe
+D:\ETEC\Tcc\bin\roslyn\vbc.exe.config
+D:\ETEC\Tcc\bin\roslyn\vbc.rsp
+D:\ETEC\Tcc\bin\roslyn\VBCSCompiler.exe
+D:\ETEC\Tcc\bin\roslyn\VBCSCompiler.exe.config
+D:\ETEC\Tcc\bin\Antlr3.Runtime.dll
+D:\ETEC\Tcc\bin\BouncyCastle.Crypto.dll
+D:\ETEC\Tcc\bin\Google.Protobuf.dll
+D:\ETEC\Tcc\bin\K4os.Compression.LZ4.dll
+D:\ETEC\Tcc\bin\K4os.Compression.LZ4.Streams.dll
+D:\ETEC\Tcc\bin\K4os.Hash.xxHash.dll
+D:\ETEC\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ETEC\Tcc\bin\Microsoft.Web.Infrastructure.dll
+D:\ETEC\Tcc\bin\MySql.Data.dll
+D:\ETEC\Tcc\bin\Newtonsoft.Json.dll
+D:\ETEC\Tcc\bin\System.Buffers.dll
+D:\ETEC\Tcc\bin\System.IO.Pipelines.dll
+D:\ETEC\Tcc\bin\System.Memory.dll
+D:\ETEC\Tcc\bin\System.Numerics.Vectors.dll
+D:\ETEC\Tcc\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\ETEC\Tcc\bin\System.Threading.Tasks.Extensions.dll
+D:\ETEC\Tcc\bin\System.Web.Helpers.dll
+D:\ETEC\Tcc\bin\System.Web.Mvc.dll
+D:\ETEC\Tcc\bin\System.Web.Optimization.dll
+D:\ETEC\Tcc\bin\System.Web.Razor.dll
+D:\ETEC\Tcc\bin\System.Web.WebPages.Deployment.dll
+D:\ETEC\Tcc\bin\System.Web.WebPages.dll
+D:\ETEC\Tcc\bin\System.Web.WebPages.Razor.dll
+D:\ETEC\Tcc\bin\WebGrease.dll
+D:\ETEC\Tcc\bin\BouncyCastle.Crypto.xml
+D:\ETEC\Tcc\bin\Google.Protobuf.pdb
+D:\ETEC\Tcc\bin\Google.Protobuf.xml
+D:\ETEC\Tcc\bin\K4os.Compression.LZ4.xml
+D:\ETEC\Tcc\bin\K4os.Compression.LZ4.Streams.xml
+D:\ETEC\Tcc\bin\K4os.Hash.xxHash.xml
+D:\ETEC\Tcc\bin\MySql.Data.xml
+D:\ETEC\Tcc\bin\System.Buffers.xml
+D:\ETEC\Tcc\bin\System.IO.Pipelines.xml
+D:\ETEC\Tcc\bin\System.Memory.xml
+D:\ETEC\Tcc\bin\System.Numerics.Vectors.xml
+D:\ETEC\Tcc\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\ETEC\Tcc\bin\System.Threading.Tasks.Extensions.xml
+D:\ETEC\Tcc\bin\System.Web.Helpers.xml
+D:\ETEC\Tcc\bin\System.Web.Mvc.xml
+D:\ETEC\Tcc\bin\System.Web.Optimization.xml
+D:\ETEC\Tcc\bin\System.Web.Razor.xml
+D:\ETEC\Tcc\bin\System.Web.WebPages.xml
+D:\ETEC\Tcc\bin\System.Web.WebPages.Deployment.xml
+D:\ETEC\Tcc\bin\System.Web.WebPages.Razor.xml
+D:\ETEC\Tcc\bin\Newtonsoft.Json.xml
+D:\ETEC\Tcc\bin\Antlr3.Runtime.pdb
+D:\ETEC\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ETEC\Tcc\bin\pt-br\System.Web.Helpers.resources.dll
+D:\ETEC\Tcc\bin\pt-br\System.Web.Mvc.resources.dll
+D:\ETEC\Tcc\bin\pt-br\System.Web.Optimization.resources.dll
+D:\ETEC\Tcc\bin\pt-br\System.Web.Razor.resources.dll
+D:\ETEC\Tcc\bin\pt-br\System.Web.WebPages.resources.dll
+D:\ETEC\Tcc\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+D:\ETEC\Tcc\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+D:\ETEC\Tcc\obj\Debug\Tcc.csproj.AssemblyReference.cache
+D:\ETEC\Tcc\obj\Debug\Tcc.csproj.CoreCompileInputs.cache
+D:\ETEC\Tcc\obj\Debug\Tcc.csproj.CopyComplete
+D:\ETEC\Tcc\obj\Debug\Tcc.dll
+D:\ETEC\Tcc\obj\Debug\Tcc.pdb
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Tcc.dll.config
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Tcc.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Tcc.pdb
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\csc.exe
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\csc.exe.config
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\csc.rsp
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\csi.exe
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\csi.exe.config
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\csi.rsp
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.AppContext.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Console.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.IO.Compression.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Net.Http.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Net.Sockets.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.ValueTuple.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Xml.XPath.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\vbc.exe
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\vbc.exe.config
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\vbc.rsp
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\VBCSCompiler.exe
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Antlr3.Runtime.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\BouncyCastle.Crypto.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Google.Protobuf.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\K4os.Compression.LZ4.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\K4os.Hash.xxHash.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\MySql.Data.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Newtonsoft.Json.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Buffers.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.IO.Pipelines.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Memory.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Numerics.Vectors.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.Helpers.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.Mvc.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.Optimization.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.Razor.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.WebPages.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.WebPages.Razor.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\WebGrease.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\BouncyCastle.Crypto.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Google.Protobuf.pdb
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Google.Protobuf.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\K4os.Compression.LZ4.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\K4os.Hash.xxHash.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\MySql.Data.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Buffers.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.IO.Pipelines.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Memory.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Numerics.Vectors.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.Helpers.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.Mvc.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.Optimization.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.Razor.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.WebPages.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\System.Web.WebPages.Razor.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Newtonsoft.Json.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Antlr3.Runtime.pdb
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\obj\Debug\Tcc.csproj.AssemblyReference.cache
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\obj\Debug\Tcc.csproj.CoreCompileInputs.cache
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\obj\Debug\Tcc.csproj.CopyComplete
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\obj\Debug\Tcc.dll
+C:\Users\3bdsmod\Downloads\TCC\Asp NET\Tcc\obj\Debug\Tcc.pdb
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Tcc.dll.config
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Tcc.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Tcc.pdb
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\csc.exe
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\csc.exe.config
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\csc.rsp
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\csi.exe
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\csi.exe.config
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\csi.rsp
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.AppContext.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Console.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.IO.Compression.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Net.Http.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Net.Sockets.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.ValueTuple.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Xml.XPath.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\vbc.exe
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\vbc.exe.config
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\vbc.rsp
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\VBCSCompiler.exe
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Antlr3.Runtime.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\BouncyCastle.Crypto.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Google.Protobuf.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\K4os.Compression.LZ4.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\K4os.Hash.xxHash.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\MySql.Data.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Newtonsoft.Json.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Buffers.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.IO.Pipelines.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Memory.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Numerics.Vectors.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.Helpers.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.Mvc.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.Optimization.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.Razor.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.WebPages.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.WebPages.Razor.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\WebGrease.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\BouncyCastle.Crypto.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Google.Protobuf.pdb
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Google.Protobuf.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\K4os.Compression.LZ4.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\K4os.Hash.xxHash.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\MySql.Data.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Buffers.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.IO.Pipelines.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Memory.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Numerics.Vectors.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.Helpers.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.Mvc.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.Optimization.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.Razor.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.WebPages.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\System.Web.WebPages.Razor.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Newtonsoft.Json.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Antlr3.Runtime.pdb
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\obj\Debug\Tcc.csproj.AssemblyReference.cache
+C:\Users\3bdsmod\Documents\MC\Tcc\obj\Debug\Tcc.csproj.CoreCompileInputs.cache
+C:\Users\3bdsmod\Documents\MC\Tcc\obj\Debug\Tcc.csproj.CopyComplete
+C:\Users\3bdsmod\Documents\MC\Tcc\obj\Debug\Tcc.dll
+C:\Users\3bdsmod\Documents\MC\Tcc\obj\Debug\Tcc.pdb

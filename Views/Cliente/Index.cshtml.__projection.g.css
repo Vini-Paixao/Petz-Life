@@ -1,0 +1,226 @@
+/* BEGIN EXTERNAL SOURCE */
+
+        .box {
+            border: 1px solid #CCCCCC;
+            background-color: #FFFFFF;
+            box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+            .box:hover {
+                transform: scale(1.05);
+                border: 1px solid #5b00e6;
+                background-color: #FFFFFF;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+
+        .history-title {
+            font-size: 25px;
+            font-weight: 700;
+            color: #5A20B5;
+        }
+
+        .history-item {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .info-btn {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 4px solid #6400FF;
+            background-color: #6400FF;
+            color: #FFFFFF;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+            .info-btn:hover {
+                border: 4px solid #6400FF;
+                background-color: #fff;
+                text-decoration: none;
+                color: #6400FF;
+            }
+
+        .view-all-btn {
+            border: 4px solid #DF83FF;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #DF83FF;
+            color: #FFFFFF;
+            border-radius: 30px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            .view-all-btn:hover {
+                transform: scale(1.05);
+                border: 4px solid #DF83FF;
+                background-color: #DF83FF;
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+        .titulos {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6400FF;
+            font-size: 60px
+        }
+
+        .tituloss {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #000;
+            font-size: 45px
+        }
+
+        .fundo {
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgba(131, 192, 255, 0.35);
+            border-radius: 30px;
+        }
+    
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+i {
+font-size: 40px; color: #6400FF;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+i {
+font-size: 40px; color: #6400FF;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+i {
+cursor: pointer; font-size: 30px; color:#6400FF;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+i {
+font-size: 40px; color: #6400FF;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+
+        .box {
+            border: 1px solid #CCCCCC;
+            background-color: #FFFFFF;
+            box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+            .box:hover {
+                transform: scale(1.05);
+                border: 1px solid #5b00e6;
+                background-color: #FFFFFF;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+
+        .history-title {
+            font-size: 25px;
+            font-weight: 700;
+            color: #5A20B5;
+        }
+
+        .history-item {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .info-btn {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 4px solid #6400FF;
+            background-color: #6400FF;
+            color: #FFFFFF;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+            .info-btn:hover {
+                border: 4px solid #6400FF;
+                background-color: #fff;
+                text-decoration: none;
+                color: #6400FF;
+            }
+
+        .view-all-btn {
+            border: 4px solid #DF83FF;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #DF83FF;
+            color: #FFFFFF;
+            border-radius: 30px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            .view-all-btn:hover {
+                transform: scale(1.05);
+                border: 4px solid #DF83FF;
+                background-color: #DF83FF;
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+        .titulos {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6400FF;
+            font-size: 60px
+        }
+
+        .tituloss {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #000;
+            font-size: 45px
+        }
+
+        .fundo {
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgba(131, 192, 255, 0.35);
+            border-radius: 30px;
+        }
+    
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+i {
+font-size: 40px; color: #6400FF;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+i {
+font-size: 40px; color: #6400FF;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+i {
+cursor: pointer; font-size: 30px; color:#6400FF;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+i {
+font-size: 40px; color: #6400FF;
+}
+/* END EXTERNAL SOURCE */

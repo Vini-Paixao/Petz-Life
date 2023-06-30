@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Tcc.Areas.Funcionario.Models.modelRaca>
+
+@{
+    ViewBag.Title = "Lista de Raças - ";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Lista de Raças</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Nova Raça", "CadRaca", "Raca", new { area = "Funcionario" }, new { @class = "btn btn-primary rounded-pill botao-funcionario" })
+</p>
+<table class="table text-center">
+    <tr>
+        <th class="col-md-3">
+            @Html.DisplayNameFor(model => model.idRaca)
+        </th>
+        <th class="col-md-3">
+            @Html.DisplayNameFor(model => model.nomeRaca)
+        </th>
+        <th class="col-md-3">
+            @Html.DisplayNameFor(model => model.nomeTipo)
+        </th>
+        <th class="col-md-3">Ações</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-md-3">
+                @Html.DisplayFor(modelItem => item.idRaca)
+            </td>
+            <td class="col-md-3">
+                @Html.DisplayFor(modelItem => item.nomeRaca)
+            </td>
+            <td class="col-md-3">
+                @Html.DisplayFor(modelItem => item.nomeTipo)
+            </td>
+            <td class="col-md-3">
+                @Html.ActionLink("Atualizar", "EditarRaca", new { id = item.idRaca }) |
+                @Html.ActionLink("Excluir", "ExcluirRaca", new { id = item.idRaca }, new { onclick = " return confirm('Deseja realmente excluir?');" })
+            </td>
+        </tr>
+    }
+
+</table>

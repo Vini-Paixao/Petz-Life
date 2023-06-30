@@ -1,0 +1,73 @@
+﻿@model Tcc.Models.modelCliente
+
+@{
+    ViewBag.Title = "Alteração cadastral -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulos">Alteração das Informações Pessoais</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm("EditarCliente", "Cliente", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal was-validated">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.idCliente)
+    @Html.HiddenFor(model => model.idLogin)
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="nomeCliente">@Html.LabelFor(model => model.nomeCliente)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="nomeCliente" id="nomeCliente" value="@Model.nomeCliente" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="sobrenomeCliente">@Html.LabelFor(model => model.sobrenomeCliente)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="50" name="sobrenomeCliente" id="sobrenomeCliente" value="@Model.sobrenomeCliente" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="telefoneCliente">@Html.LabelFor(model => model.telefoneCliente)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="tel" maxlength="20" name="telefoneCliente" id="telefoneCliente" value="@Model.telefoneCliente" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="celularCliente">@Html.LabelFor(model => model.celularCliente)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="tel" maxlength="20" name="celularCliente" id="celularCliente" value="@Model.celularCliente" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="rgCliente">@Html.LabelFor(model => model.rgCliente)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="15" name="rgCliente" id="rgCliente" value="@Model.rgCliente" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group text-center fw-bolder">
+        <label class="control-label col-md-12" for="cpfCliente">@Html.LabelFor(model => model.cpfCliente)</label>
+        <div class="col-md-4 offset-md-4 pt-2">
+            <input class="form-control d-inline-flex text-center" required type="text" maxlength="15" name="cpfCliente" id="cpfCliente" value="@Model.cpfCliente" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group col-12 d-inline-flex text-center">
+        <div class="text-center fw-bolder col-md-2 offset-md-4">
+            <a href="@Url.Action("DetalhesCliente", "Cliente", new { @area = "", id = Model.idLogin } )" class="btn btn-warning text-center fw-bolder">
+                Cancelar/Voltar
+            </a>
+        </div>
+        <div class="text-center fw-bolder col-md-2">
+            <input type="submit" value="Alterar Informações" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+}

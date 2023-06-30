@@ -1,0 +1,476 @@
+﻿
+@model IEnumerable<Tcc.Areas.Funcionario.Models.modelPlano>
+@{
+    ViewBag.Title = "";
+}
+<head>
+    <style>
+        .botao1 {
+            background-color: #A56BFF;
+            border: 5px solid #A56BFF;
+            color: #ffffff;
+            transition: 0.3s;
+            font-size: 25px;
+            width: auto;
+            height: auto;
+            padding: 10px 20px 10px 20px;
+            margin-top: 20px
+        }
+
+            .botao1:hover {
+                border: 5px solid #A56BFF;
+                background-color: #ffffff;
+                color: #A56BFF;
+                transform: scale(1.05);
+            }
+
+        .botao-informacoes {
+            color: #fff;
+            width: 249px;
+            height: 50px;
+            font-weight: 600;
+            font-size: 20px;
+            padding: 10px 20px 0 20px;
+            transition: 0.3s;
+            background: #6400FF;
+            border-radius: 55px;
+        }
+
+            .botao-informacoes:hover {
+                color: #fff;
+                width: 249px;
+                height: 50px;
+                transform: scale(1.05);
+                background: #6400FF;
+                border-radius: 55px;
+            }
+
+        .botao-todos {
+            margin-top: 150px;
+            width: auto;
+            height: auto;
+            transition: 0.3s;
+            padding: 14px 20px 0 45px;
+            background: #83C0FF;
+            text-align: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 55px;
+        }
+
+            .botao-todos:hover {
+                margin-top: 150px;
+                width: auto;
+                height: auto;
+                transform: scale(1.05);
+                padding: 14px 20px 0 45px;
+                background: #83C0FF;
+                text-align: center;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 55px;
+            }
+
+            .botao-todos p {
+                font-weight: 700;
+                font-size: 30px;
+                color: #FFFFFF;
+            }
+
+            .botao-todos i {
+                padding: 13px 20px 0 0;
+                color: #FFFFFF;
+            }
+
+        .list-item-title {
+            font-weight: 700;
+            font-size: 25px;
+            color: #5A20B5;
+            margin-bottom: 0;
+        }
+
+        .list-item-description {
+            font-size: 15px;
+            font-weight: 400;
+            text-align: justify;
+            color: #000;
+            margin-top: 0;
+        }
+
+        .list-item-icon {
+            width: 10%;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .botao-contrate {
+            font-weight: 600;
+            font-size: 35px;
+            color: #fff;
+            padding: 10px 40px 10px 40px;
+            transition: 0.3s;
+            width: auto;
+            height: auto;
+            background: #6400FF;
+            border-radius: 20px;
+        }
+
+            .botao-contrate:hover {
+                font-weight: 600;
+                font-size: 35px;
+                color: #fff;
+                transform: scale(1.05);
+                width: auto;
+                height: auto;
+                background: #6400FF;
+                border-radius: 20px;
+            }
+
+        .section-title {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            color: #6400FF;
+            margin-bottom: 40px;
+        }
+
+        .column-title {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .column-description {
+            font-weight: 400;
+            font-size: 20px;
+            text-align: justify;
+            color: #000000;
+        }
+
+        .or-text {
+            font-size: 45px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 110%;
+        }
+
+
+        .botao-proteger {
+            font-weight: 600;
+            font-size: 35px;
+            text-transform: uppercase;
+            color: #fff;
+            padding: 10px 40px 10px 40px;
+            transition: 0.3s;
+            width: auto;
+            height: auto;
+            background: #6400FF;
+            border-radius: 20px;
+        }
+
+            .botao-proteger:hover {
+                font-weight: 600;
+                font-size: 35px;
+                color: #fff;
+                transform: scale(1.05);
+                width: auto;
+                height: auto;
+                background: #6400FF;
+                border-radius: 20px;
+            }
+
+        .plano-destaque {
+            border: 1px solid #CCCCCC;
+            transition: 0.3s;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: -100px
+        }
+
+            .plano-destaque:hover {
+                border-color: #6400FF;
+                transform: scale(1.05);
+                border-radius: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-bottom: -100px
+            }
+
+        .tag {
+            font-weight: 600;
+            font-size: 20px;
+            color: #444;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            width: 100%;
+            text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF, 1px 1px 0 #FFF, 1px 1px 0 #FFF;
+        }
+
+        .testimonial .swiper-button-prev,
+        .testimonial .swiper-button-next {
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 50px;
+            color: #6400FF;
+            margin-top: -160px;
+        }
+
+            .testimonial .swiper-button-next:hover,
+            .testimonial .swiper-button-prev:hover {
+                transform: scale(1.05);
+            }
+
+        .testimonial .swiper .content {
+            color: #000;
+        }
+
+
+        .testimonial .swiper-slide p {
+            text-align: justify;
+        }
+
+        .testimonial .swiper-slide:active {
+            cursor: grabbing;
+            cursor: -webkit-grabbing;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="row offset-1 text-center">
+        <div class="col-md-6">
+            <h1 style="font-weight: 700; font-size: 55px; text-transform: uppercase; color: #A56BFF; text-align:center">
+                Conheça a Petz-Life
+            </h1>
+            <h3 style="font-weight: 500; font-size: 25px; text-align: start">
+                Garanta uma vida mais longa e saudável para o seu filho de quatro patas.
+            </h3>
+            <p style="text-align: justify">
+                Entenda como funciona o <b>mais completo plano de saúde pet do Brasil,</b> e nunca mais se surpreenda com consultas e exames excessivamente caros.
+            </p>
+            <a href="@Url.Action("Sobre", "Home", new { area = "" })" class="btn btn-custom rounded-pill botao1">Conheça a Petz-Life</a>
+        </div>
+        <div class="col-md-6">
+            <img src="~/Imagens/cachorro e pata.png" alt="Imagem Ilustrativa" class="img-fluid" style="width: 50%;">
+        </div>
+    </div>
+    <!-- Planos principais -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 style="text-transform: uppercase; color: rgba(69, 161, 255, 0.94); text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); font-weight: 600; font-size: 60px;">Planos de saúde para seu pet</h2>
+                <p style="font-weight: 600; font-size: 20px; line-height: 30px;"><span style="color: #6400FF;">Seu animal de estimação estará sempre protegido:</span> O preço e a cobertura serão os mesmos, não importa a raça ou idade. Sempre que precisar, poderá usar sem a necessidade de autorização ou trâmites burocráticos.</p>
+            </div>
+        </div>
+        <div class="row mt-4 pt-5" style="background-color: rgba(131, 192, 255, 0.65); padding: 20px; border-radius: 30px">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 text-center">
+                    <div class="card plano-destaque">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="font-weight: 500; font-size: 30px;">Plano <span style="color:@item.corPlano; font-weight: 700">@item.nomePlano</span></h5>
+                            <img src="@item.imgPlano" alt="Imagem Ilustrativa" class="img-fluid mb-4" style="width: 100%;">
+                            <div class="d-flex align-items-center text-center" style="position: relative; padding: 8px;">
+                                <div style="background: @item.corPlano; mix-blend-mode: darken; filter: blur(2px); border-radius: 10px; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                                <p class="tag">
+                                    @item.tagPlano
+                                </p>
+                            </div>
+                            <p class="text-center my-2" style="font-weight: 500; font-size: 30px;">@item.valorPlano/mês</p>
+                            @Html.ActionLink("Mais Informações", "DetalhesPlano", "Home", new { id = item.idPlano }, new { @class = "btn btn-custom rounded-pill botao-informacoes" })
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- Botão todos os Planos -->
+    <div class="text-center">
+        <a href="@Url.Action("Planos", "Home", new { area = "" })" class="btn btn-custom rounded-pill botao-todos"><p>Consulte todos os nossos planos <i class="fa-solid fa-angle-right"></i></p></a>
+    </div>
+    <!-- Como funciona os Planos -->
+    <section class="container mt-5">
+        <h2 class="text-center mb-5 pt-3" style="text-transform: uppercase; font-style: normal; font-weight: 800; font-size: 55px; color: #5A20B5; ">Como funciona os nossos planos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <ol>
+                    <li class="d-flex align-items-start mb-4">
+                        <img src="~/Imagens/Ícone.png" alt="Ícone 1" class="list-item-icon">
+                        <div>
+                            <h6 class="list-item-title">1. Tudo online</h6>
+                            <p class="list-item-description">Contrate o plano de forma prática e segura diretamente pelo site, de qualquer lugar. É simples e totalmente seguro.</p>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-start mb-4">
+                        <img src="~/Imagens/Ícone 2.png" alt="Ícone 1" class="list-item-icon">
+                        <div>
+                            <h6 class="list-item-title">2. Tenha acesso a todas as informações</h6>
+                            <p class="list-item-description">Após a contratação, você receberá um e-mail com uma cópia do contrato e as instruções de acesso ao Espaço do Cliente. Lá, você poderá acompanhar todas as informações do plano do seu pet e os serviços do Petlife.</p>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-start mb-4">
+                        <img src="~/Imagens/Ícone 3.png" alt="Ícone 1" class="list-item-icon">
+                        <div>
+                            <h6 class="list-item-title">3. Faça a microchipagem</h6>
+                            <p class="list-item-description">Microchipe seu amigo gratuitamente em uma clínica de sua escolha. Agende o procedimento e as carências do plano começam após a microchipagem.</p>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-start mb-4">
+                        <img src="~/Imagens/Ícone 4.png" alt="Ícone 1" class="list-item-icon">
+                        <div>
+                            <h6 class="list-item-title">4. Proteção sem burocracia</h6>
+                            <p class="list-item-description">Sem a necessidade de documentos, basta fornecer o número do microchip para a clínica acessar o histórico completo do seu pet e utilizar o plano.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="~/Imagens/veterinarios com dog.png" alt="Imagem da Direita" class="img-fluid" style="margin-top: -70px">
+            </div>
+        </div>
+        <div class="text-center mt-1">
+            <a href="@Url.Action("Planos", "Home", new { area = "" })" class="btn btn-custom botao-contrate">Contrate Agora! <i class="fa-solid fa-paw"></i></a>
+        </div>
+    </section>
+    <!-- Decisão é sua -->
+    <section class="container mt-5 mb-5">
+        <h2 class="section-title">Saúde do seu pet é coisa séria, e a decisão é sua.</h2>
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img src="~/Imagens/cachorro feliz.png" alt="Imagem da Esquerda" class="img-fluid mb-3">
+                <h3 class="column-title">Proteja seu pet agora</h3>
+                <p class="column-description">Em pouco tempo você vai perceber como ficou mais fácil cuidar do seu pet. Além das facilidades, você terá a segurança de contar com um suporte veterinário de qualidade e não se preocupar com os gastos.</p>
+            </div>
+            <div class="col-md-2 text-center">
+                <p class="or-text">OU</p>
+            </div>
+            <div class="col-md-5 text-center mt-4">
+                <img src="~/Imagens/cachorro triste.png" alt="Imagem da Direita" class="img-fluid mb-3">
+                <h3 class="column-title">Deixe para depois</h3>
+                <p class="column-description">Em 5 anos você terá tido uma despesa de R$ 10 mil a mais do que se tivesse um plano de saúde para o seu pet. Se o seu amigo tiver algum problema de saúde, você vai se questionar o porquê de não ter contratado um plano antes.</p>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <a href="@Url.Action("Planos", "Home", new { area = "" })" class="btn btn-custom botao-proteger"><i class="fa-solid fa-shield-dog"></i> Proteger meu Pet Agora <i class="fa-solid fa-shield-cat"></i></a>
+        </div>
+    </section>
+    <!-- Carrossel de Depoimentos -->
+    <h3 style="text-align: center; color: #6400FF; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); transform: matrix(1, 0, 0, 1, 0, 0); font-weight: 400; font-size: 60px;">O que nossos clientes dizem</h3>
+    <div class="testimonial">
+        <div class="swiper mySwiper mt-5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="content text-center">
+                        <img src="~/Imagens/Pessoa 1.jpg" alt="Person 1" class="rounded-circle mb-3" width="100" height="100">
+                        <p class="text-center fw-bold my-auto" style="font-style:italic">Bruno Medeiros - Gerente de Marketing</p>
+                        <p class="my-3" style="text-align: justify">"Quero expressar minha gratidão à Petz-Life pelo incrível plano de saúde para meu cachorro. Desde que aderimos ao plano, temos recebido um atendimento excepcional para todas as necessidades de saúde do nosso companheiro. As consultas veterinárias, vacinas e até mesmo os exames foram cobertos pelo plano, proporcionando-nos tranquilidade e economia. A equipe da Petz-Life sempre se mostrou prestativa e profissional. Estamos muito satisfeitos com os serviços prestados!"</p>
+                        <div class="my-auto">
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content text-center">
+                        <img src="~/Imagens/Pessoa 2.jpg" alt="Person 2" class="rounded-circle mb-3" width="100" height="100">
+                        <p class="text-center fw-bold my-auto" style="font-style:italic">Jéssica Oliveira - Analista de RH</p>
+                        <p class="my-3" style="text-align: justify">"Gostaria de agradecer imensamente à Petz-Life pelo maravilhoso plano de saúde pet que eles oferecem. Desde que aderi ao plano para minha cadela, tive a tranquilidade de saber que ela está protegida e bem cuidada. A Petz-Life cobre todas as consultas veterinárias e exames necessários, o que me proporcionou economia significativa ao longo do tempo. Além disso, a equipe sempre foi gentil e prestativa, oferecendo um atendimento excelente. Estou muito feliz com o serviço e recomendo a Petz-Life para todos os donos de animais de estimação."</p>
+                        <div class="my-auto">
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-regular fa-star" style="color: #FFA840"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content text-center">
+                        <img src="~/Imagens/Pessoa 3.jpg" alt="Person 3" class="rounded-circle mb-3" width="100" height="100">
+                        <p class="text-center fw-bold my-auto" style="font-style:italic">Walter Menezes - CEO WM Tech</p>
+                        <p class="my-3" style="text-align: justify">"Gostaria de compartilhar minha experiência positiva com a Petz-Life e seu plano de saúde para pets. Tenho um cachorro há alguns anos e, recentemente, decidi aderir ao plano para garantir que ele recebesse os melhores cuidados de saúde possíveis. A Petz-Life superou minhas expectativas. Além de cobrir todas as consultas e vacinas, o plano também oferece descontos em medicamentos e procedimentos adicionais. Estou muito grato por essa tranquilidade financeira e pela dedicação da equipe em cuidar do meu companheiro canino."</p>
+                        <div class="my-auto">
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFA840"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content text-center">
+                        <img src="~/Imagens/Pessoa 4.jpg" alt="Person 4" class="rounded-circle mb-3" width="100" height="100">
+                        <p class="text-center fw-bold my-auto" style="font-style:italic">Diego Yoshida - Auxiliar de Finanças</p>
+                        <p class="my-3" style="text-align: justify">"Quero expressar minha gratidão à Petz-Life pelo plano de saúde pet excepcional que eles oferecem. Desde que aderimos ao plano, meu cão recebeu cuidados veterinários de primeira qualidade. A equipe da Petz-Life é sempre amigável, atenciosa e disposta a responder a todas as nossas perguntas. Além disso, os descontos oferecidos pelo plano têm sido uma grande ajuda financeira. Estamos muito satisfeitos e recomendaríamos a Petz-Life para qualquer pessoa que queira o melhor para seu animal de estimação."</p>
+                        <div class="my-auto">
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: #FFA840"></i>
+                            <i class="fa-regular fa-star" style="color: #FFA840"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content text-center">
+                        <img src="~/Imagens/Pessoa 5.jpg" alt="Person 4" class="rounded-circle mb-3" width="100" height="100">
+                        <p class="text-center fw-bold my-auto" style="font-style:italic">Regina Silva - Designer de Interiores</p>
+                        <p class="my-3" style="text-align: justify">"Agradeço imensamente à Petz-Life pelo excelente serviço de plano de saúde pet. Meus cães receberam cuidados médicos de alta qualidade e, recentemente, o plano cobriu os gastos com o tratamento de uma infecção bacteriana na pele do meu cachorro, aliviando o impacto financeiro. A equipe de atendimento ao cliente sempre foi prestativa e ágil. Recomendo a todos considerarem o plano da Petz-Life para o bem-estar de seus animais de estimação."</p>
+                        <div class="my-auto">
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-regular fa-star" style="color: #FFA840"></i>
+                            <i class="fa-regular fa-star" style="color: #FFA840"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content text-center">
+                        <img src="~/Imagens/Pessoa 6.jpg" alt="Person 4" class="rounded-circle mb-3" width="100" height="100">
+                        <p class="text-center fw-bold my-auto" style="font-style:italic">Jhonatas Ribeiro - Psicólogo</p>
+                        <p class="my-3" style="text-align: justify">"Estou extremamente grato à Petz-Life por oferecer um plano de saúde pet abrangente, inclusive para animais exóticos. Como proprietário de répteis, fiquei aliviado ao descobrir que a Petz-Life cobre cuidados médicos específicos para eles. Recentemente, meu lagarto teve problemas digestivos e, graças ao plano, pude agendar uma consulta com um veterinário especializado e receber os tratamentos necessários. A equipe da Petz-Life foi profissional e prestativa, e recomendo fortemente seu serviço para donos de animais exóticos."</p>
+                        <div class="my-auto">
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                            <i class="fa-solid fa-star" style="color: #FFA840"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev prev-slide"></div>
+            <div class="swiper-button-next next-slide"></div>
+        </div>
+    </div>
+    <!-- Inicializador do Carrossel -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                spaceBetween: 50,
+                speed: 1000,
+                grabCursor: true,
+                disableOnInteraction: false,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                loop: true,
+                navigation: {
+                    nextEl: ".next-slide",
+                    prevEl: ".prev-slide",
+                },
+                autoplay: {
+                    delay: 10000,
+                }
+            });
+        });
+    </script>
+</body>

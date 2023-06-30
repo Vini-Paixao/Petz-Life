@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Tcc.Areas.Funcionario.Models.modelBeneficio>
+
+@{
+    ViewBag.Title = "Lista de Beneficios - ";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Lista de Beneficios</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Novo Benefício", "CadBeneficio", "Beneficio", new { area = "Funcionario" }, new { @class = "btn btn-primary rounded-pill botao-funcionario" })
+</p>
+<table class="table text-center">
+    <tr>
+        <th class="col-3">
+            @Html.DisplayNameFor(model => model.idBeneficio)
+        </th>
+        <th class="col-3">
+            @Html.DisplayNameFor(model => model.nomeBeneficio)
+        </th>
+        <th class="col-3">
+            @Html.DisplayNameFor(model => model.nomePlano)
+        </th>
+        <th class="col-3">Ações</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-3">
+                @Html.DisplayFor(modelItem => item.idBeneficio)
+            </td>
+            <td class="col-3">
+                @Html.DisplayFor(modelItem => item.nomeBeneficio)
+            </td>
+            <td class="col-3">
+                @Html.DisplayFor(modelItem => item.nomePlano)
+            </td>
+            <td class="col-3">
+                @Html.ActionLink("Atualizar", "EditarBeneficio", new { id = item.idBeneficio }) |
+                @Html.ActionLink("Excluir", "ExcluirBeneficio", new { id = item.idBeneficio }, new { onclick = " return confirm('Deseja realmente excluir?');" })
+            </td>
+        </tr>
+    }
+
+</table>

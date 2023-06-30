@@ -1,0 +1,75 @@
+﻿@model Tcc.Areas.Funcionario.Models.modelEndereco
+
+@{
+    ViewBag.Title = "Endereco Selecionado - ";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Endereco Selecionado</h2>
+
+<table class="table text-center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.logradouroEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.complementoEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cepEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bairroEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cidadeEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeEstado)
+        </th>
+        <th>Opções</th>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.idEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.nomeEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.logradouroEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.numeroEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.complementoEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.cepEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.bairroEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.cidadeEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.nomeEstado)
+        </td>
+        <td>
+            @Html.ActionLink("Atualizar", "EditarEndereco", new { id = Model.idEndereco })
+        </td>
+    </tr>
+
+</table>

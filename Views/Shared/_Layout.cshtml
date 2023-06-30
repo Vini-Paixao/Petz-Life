@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Petz-Life</title>
+    <link rel="icon" type="image/x-icon" href="~/Imagens/favicon.png">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/9040baff3f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        input, select, textarea {
+            max-width: none;
+        }
+
+        li a {
+            color: #000000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+            li a:hover {
+                color: #ffffff;
+            }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1 0 auto;
+        }
+
+        .footer {
+            flex-shrink: 0;
+            padding: 10px,10px,0,10px;
+        }
+
+        footer {
+            background-color: #67B2FF;
+            width: 100%;
+        }
+
+        .footer .row {
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul.list-inline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        .nav-item {
+            font-weight: 500;
+            font-size: 25px
+        }
+
+        .fundo {
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgba(131, 192, 255, 0.35);
+            border-radius: 30px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            margin-right: 30px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            color: #83C0FF;
+        }
+
+            .nav-link:hover {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #A56BFF;
+            }
+
+        .botao-cancel {
+            text-decoration: none;
+            background-color: #67B2FF;
+            border: 4px solid #67B2FF;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+            .botao-cancel:hover {
+                text-decoration: none;
+                border: 4px solid #67B2FF;
+                background-color: #ffffff;
+                color: #67B2FF;
+                transform: scale(1.05);
+            }
+
+        .botão1 {
+            text-decoration: none;
+            background-color: #A56BFF;
+            border: 4px solid #A56BFF;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+            .botão1:hover {
+                text-decoration: none;
+                border: 4px solid #A56BFF;
+                background-color: #ffffff;
+                color: #A56BFF;
+                transform: scale(1.05);
+            }
+
+        .botão2 {
+            text-decoration: none;
+            background-color: #A56BFF;
+            border: 4px solid #A56BFF;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+            .botão2:hover {
+                text-decoration: none;
+                border: 4px solid #A56BFF;
+                background-color: #ffffff;
+                color: #A56BFF;
+                transform: scale(1.05);
+            }
+
+        .link-footer {
+            text-decoration: none;
+            color: #000000;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+            .link-footer:hover {
+                text-decoration: none;
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+        .icons {
+            display: inline-flex;
+            column-gap: 25px;
+        }
+
+        .icone {
+            text-decoration: none;
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #000;
+            border-radius: 50%;
+            outline: 2px solid #000;
+            transition-property: outline-offset, outline-color, background-color;
+            transition-duration: 0.25s;
+        }
+
+            .icone:hover {
+                text-decoration: none;
+                outline-color: #fff;
+                outline-offset: 4px;
+            }
+
+            .icone i {
+                margin: auto;
+            }
+
+            .icone:hover i {
+                color: #fff;
+                animation: shake 0.25s;
+            }
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .floating-btn {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #25D366;
+            color: #FFFFFF;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+            .floating-btn:hover {
+                transform: scale(1.05);
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+        .floating-btn-whatsapp {
+            background-color: #25D366;
+        }
+
+            .floating-btn-whatsapp:hover {
+                background-color: #20c65a;
+            }
+
+        .floating-btn-top {
+            background-color: #6400FF;
+        }
+
+            .floating-btn-top:hover {
+                background-color: #5b00e6;
+            }
+
+            .floating-btn-top i {
+                font-size: 15px;
+                vertical-align: middle;
+            }
+
+        .floating-btn-whatsapp i {
+            vertical-align: middle;
+        }
+
+        .titulos {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6400FF;
+            font-size: 60px
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+
+            ul li a:hover {
+                text-decoration: none;
+            }
+
+        @@keyframes shake {
+            10% {
+                transform: rotate(15deg);
+            }
+
+            20% {
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                transform: rotate(15deg);
+            }
+
+            40% {
+                transform: rotate(-15deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+        <div class="container-fluid col-11 my-auto">
+            @if (Session["tipoLogado2"] != null) //navbar Cliente
+            {
+                <a class="navbar-brand" href="@Url.Action("Index", "Cliente")" style="margin-right: 10px; padding: 0;">
+                    <img src="~/Imagens/Logo.png" style="width: 150px;" />
+                </a>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="border-bottom: 1px solid #d9c1ff; padding-bottom: 10px">
+                    <ul class="navbar-nav col-8 text-center">
+                        <li class="nav-item col-3 offset-1">
+                            @Html.ActionLink("Meus Pets", "Index", "Animal", new { id = Session["idLogado"] }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item col-5 mx-auto">
+                            @Html.ActionLink("Agendamentos", "Agenda", "Cliente", new { area = "", id = Convert.ToInt32(Session["idLogado"]) }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item col-4 mx-auto">
+                            @Html.ActionLink("Atendimentos", "Historico", "Cliente", new { area = "", id = Convert.ToInt32(Session["idLogado"]) }, new { @class = "nav-link" })
+                        </li>
+                    </ul>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="@Url.Action("DetalhesCliente", "Cliente", new { id = Session["idLogado"] })" class="btn btn-custom rounded-pill botão2">Minha Conta <i class="fa-regular fa-circle-user"></i></a>
+                        <a href="@Url.Action("Logout", "Home", new { area = "" })" class="btn btn-custom rounded-pill botão2">Log-Out <i class="fa-solid fa-right-to-bracket"></i></a>
+                    </div>
+                </div>
+            }
+            else//navbar Normal
+            {
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="margin-right: 10px; padding: 0;">
+                    <img src="~/Imagens/Logo.png" style="width: 150px;" />
+                </a>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="border-bottom: 1px solid #d9c1ff; padding-bottom: 10px">
+                    <ul class="navbar-nav col-8 text-center">
+                        <li class="nav-item col-3 offset-3">
+                            @Html.ActionLink("Início", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item col-3">
+                            @Html.ActionLink("Clínicas", "Clinicas", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item col-3">
+                            @Html.ActionLink("Sobre", "Sobre", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                    </ul>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="@Url.Action("Planos", "Home", new { area = "" })" class="btn btn-custom rounded-pill botão1">Consulte nossos planos</a>
+                        <a href="@Url.Action("Login", "Home", new { area = "" })" class="btn btn-custom rounded-pill botão2">Minha Conta <i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+            }
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="content">
+            <div class="container-fluid body-content col-11">
+                @RenderBody()
+                <br />
+            </div>
+        </div>
+        <footer class="text-black text-center p-4">
+            <div class="container-fluid footer">
+                <div class="row">
+                    <div class="col-md-4 my-auto">
+                        <ul class="list-unstyled">
+                            <a href="https://goo.gl/maps/UBzgN4ErzhgczoAd8" target="_blank" class="link-footer">
+                            <li style="margin-bottom:10px"><i class="fas fa-map-marker-alt fa-lg"></i> Av. Paulista, 1374 - Bela Vista, SP/SP</li></a>
+                            <a href="mailto:contato@petzlife.com.br" target="_blank" class="link-footer">
+                            <li style="margin-bottom:10px"><i class="fas fa-envelope fa-lg"></i> contato@petzlife.com.br</li></a>
+                            <a href="tel:(11)%2032442898" target="_blank" class="link-footer">
+                            <li><i class="fas fa-phone-flip fa-lg"></i> (11) 3244-2898</li></a>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 my-auto">
+                        <div class="icons mb-3">
+                            <a href="https://www.instagram.com/" target="_blank" class="icone icon--instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="icone icon--twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="https://br.linkedin.com/" target="_blank" class="icone icon--linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank" class="icone icon--facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/" target="_blank" class="icone icon--tiktok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                        <p><b>&copy; - 2023 Petz-Life. Todos os direitos reservados.</b></p>
+                    </div>
+                    <div class="col-md-4 my-auto">
+                        <ul class="list-unstyled" style="padding-top:10px">
+                            <li>
+                                <a href="@Url.Action("Index", "Home", new { area = "" })">
+                                    <i class="fas fa-home"></i> Início
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Clinicas", "Home", new { area = "" })">
+                                    <i class="fas fa-hospital"></i> Clínicas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Sobre", "Home", new { area = "" })">
+                                    <i class="fas fa-info-circle"></i> Sobre
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Planos", "Home", new { area = "" })">
+                                    <i class="fas fa-file-alt"></i> Planos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("PoliticasPrivacidade", "Home", new { area = "" })">
+                                    <i class="fas fa-lock"></i> Políticas de Privacidade
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="floating-buttons">
+                    <a href="https://wa.me/5511988397775?text=Ol%C3%A1+vim+pelo+site+da+Pet+Life+e+quero+mais+informa%C3%A7%C3%B5es%21" target="_blank" class="floating-btn floating-btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="floating-btn floating-btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                        <i class="fa-solid fa-chevron-up fa-bounce"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

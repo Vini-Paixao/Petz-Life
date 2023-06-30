@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Tcc.Areas.Funcionario.Models.modelVeterinario>
+
+@{
+    ViewBag.Title = "Lista de Veterinário - ";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Lista de Veterinário</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Novo(a) Veterinário(a)", "CadVeterinario", "Veterinario", new { area = "Funcionario" }, new { @class = "btn btn-primary rounded-pill botao-funcionario" })
+</p>
+<table class="table text-center">
+    <tr>
+        <th class="col-1">
+            @Html.DisplayNameFor(model => model.idVeterinario)
+        </th>
+        <th class="col-2">
+            @Html.DisplayNameFor(model => model.nomeVeterinario)
+        </th>
+        <th class="col-1">
+            @Html.DisplayNameFor(model => model.especVeterinario)
+        </th>
+        <th class="col-2">
+            @Html.DisplayNameFor(model => model.telefoneVeterinario)
+        </th>
+        <th class="col-2">
+            @Html.DisplayNameFor(model => model.emailVeterinario)
+        </th>
+        <th class="col-2">
+            @Html.DisplayNameFor(model => model.nomeClinica)
+        </th>
+        <th class="col-2">Ações</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-1">
+                @Html.DisplayFor(modelItem => item.idVeterinario)
+            </td>
+            <td class="col-2">
+                @Html.DisplayFor(modelItem => item.nomeVeterinario)
+            </td>
+            <td class="col-1">
+                @Html.DisplayFor(modelItem => item.especVeterinario)
+            </td>
+            <td class="col-2">
+                @Html.DisplayFor(modelItem => item.telefoneVeterinario)
+            </td>
+            <td class="col-2">
+                @Html.DisplayFor(modelItem => item.emailVeterinario)
+            </td>
+            <td class="col-2">
+                @Html.DisplayFor(modelItem => item.nomeClinica)
+            </td>
+            <td class="col-2">
+                @Html.ActionLink("Atualizar", "EditarVeterinario", new { id = item.idVeterinario }) |
+                @Html.ActionLink("Excluir", "ExcluirVeterinario", new { id = item.idVeterinario }, new { onclick = " return confirm('Deseja realmente excluir?');" })
+            </td>
+        </tr>
+    }
+
+</table>

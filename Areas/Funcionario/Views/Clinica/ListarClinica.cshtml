@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Tcc.Areas.Funcionario.Models.modelClinica>
+
+@{
+    ViewBag.Title = "Lista de Clínicas - ";
+    Layout = "~/Areas/Funcionario/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center titulo-funcionario">Lista de Clínicas</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Nova Clínica", "CadClinica", "Clinica", new { area = "Funcionario" }, new { @class = "btn btn-primary rounded-pill botao-funcionario" })
+</p>
+<table class="table text-center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idClinica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeClinica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefoneClinica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.celularClinica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailClinica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.avaliacaoClinica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.horarioClinica)
+        </th>
+        <th>
+            Endereço da Clinica
+        </th>
+        <th>Ações</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idClinica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomeClinica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefoneClinica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.celularClinica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailClinica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.avaliacaoClinica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horarioClinica)
+        </td>
+        <td>
+            @Html.ActionLink("Endereço", "ListarEnderecoPorId", "Endereco", new { id = item.idEndereco }, null)
+        </td>
+
+        <td>
+            @Html.ActionLink("Atualizar", "EditarClinica", new { id = item.idClinica }) |
+            @Html.ActionLink("Excluir", "ExcluirClinica", new { id = item.idClinica }, new { onclick = " return confirm('Deseja realmente excluir?');" })
+        </td>
+    </tr>
+}
+
+</table>
